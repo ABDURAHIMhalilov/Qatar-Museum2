@@ -1,0 +1,32 @@
+Uri: https://ap-gateway.mastercard.com/asset/managed/resource/checkout/theme/default/logoImagePage
+File Name: C:\Downloaded Web Sites\ap-gateway.mastercard.com\asset\managed\resource\checkout\theme\default\logoImagePage
+Content Type: image/png
+
+Uri: https://ap-gateway.mastercard.com/asset/public/assets.js
+File Name: C:\Downloaded Web Sites\ap-gateway.mastercard.com\asset\public\assets.js
+Content Type: text/javascript
+
+Uri: https://ap-gateway.mastercard.com/checkout/pay/SESSION0002449093344J9890899J06
+File Name: C:\Downloaded Web Sites\ap-gateway.mastercard.com\checkout\pay\SESSION0002449093344J9890899J06.html
+Content Type: text/html
+
+Uri: https://ap-gateway.mastercard.com/checkout/public/css/default.css?cache=-1cb9aa697bb5bd974e828fab597d6e2a
+File Name: C:\Downloaded Web Sites\ap-gateway.mastercard.com\checkout\public\css\default.css
+Content Type: text/css
+
+Uri: https://ap-gateway.mastercard.com/checkout/public/images/favicon.ico
+File Name: C:\Downloaded Web Sites\ap-gateway.mastercard.com\checkout\public\images\favicon.ico
+Content Type: image/x-icon
+
+Uri: https://ap-gateway.mastercard.com/checkout/public/wro/libs.js?cache=-1cb9aa697bb5bd974e828fab597d6e2a
+File Name: C:\Downloaded Web Sites\ap-gateway.mastercard.com\checkout\public\wro\libs.js
+Content Type: text/javascript
+
+Uri: https://ap-gateway.mastercard.com/checkout/public/wro/scripts.js?cache=-1cb9aa697bb5bd974e828fab597d6e2a
+File Name: C:\Downloaded Web Sites\ap-gateway.mastercard.com\checkout\public\wro\scripts.js
+Content Type: text/javascript
+
+Uri: https://ap-gateway.mastercard.com/static/threeDS/1.3.0/three-ds.min.js
+File Name: C:\Downloaded Web Sites\ap-gateway.mastercard.com\static\threeDS\1.3.0\three-ds.min.js
+Content Type: text/javascript
+
