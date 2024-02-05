@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en-UZ" dir="ltr">
+  <head>
+    <title>Checkout - Shinkansen-Ticket.com</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, height=device-height, user-scalable=0"
+    />
+    <meta name="referrer" content="origin" />
+    <link
+      rel="preconnect"
+      href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/"
+      crossorigin
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/"
+      crossorigin
+    />
+    <link rel="preconnect" href="https://checkout.shopifycs.com" crossorigin />
+    <link
+      rel="dns-prefetch"
+      href="https://checkout.shopifycs.com"
+      crossorigin
+    />
+  </head>
+  <body class="Loading">
+    <style>
+      :root {
+        --x-skeleton--global-accent: #55c0d4;
+
+        --x-skeleton-color-schemes-scheme1-base-background: #ffffff;
+        --x-skeleton-color-schemes-scheme1-base-accent: #55c0d4;
+        --x-skeleton-color-schemes-scheme1-base-backgroundSubdued: #f6f6f6;
+        --x-skeleton-color-schemes-scheme1-base-border: #dfdfdf;
+        --x-skeleton-color-schemes-scheme1-base-text: #000000;
+        --x-skeleton-color-schemes-scheme1-base-textContrast: #ffffff;
+        --x-skeleton-color-schemes-scheme1-base-textSubdued: #0000008f;
+        --x-skeleton-color-schemes-scheme1-base-textSubdued200: #0000001a;
+
+        --x-skeleton-color-schemes-scheme2-base-background: #fafafa;
+        --x-skeleton-color-schemes-scheme2-base-accent: #55c0d4;
+        --x-skeleton-color-schemes-scheme2-base-backgroundSubdued: #f1f1f1;
+        --x-skeleton-color-schemes-scheme2-base-border: #dadada;
+        --x-skeleton-color-schemes-scheme2-base-text: #000000;
+        --x-skeleton-color-schemes-scheme2-base-textContrast: #ffffff;
+        --x-skeleton-color-schemes-scheme2-base-textSubdued: #0000008f;
+        --x-skeleton-color-schemes-scheme2-base-textSubdued200: #0000001a;
+
+        --x-skeleton-default-color-background: var(
+          --x-skeleton-color-schemes-scheme1-base-background
+        );
+        --x-skeleton-default-color-accent: var(
+          --x-skeleton-color-schemes-scheme1-base-accent
+        );
+        --x-skeleton-default-color-backgroundSubdued: var(
+          --x-skeleton-color-schemes-scheme1-base-backgroundSubdued
+        );
+        --x-skeleton-default-color-border: var(
+          --x-skeleton-color-schemes-scheme1-base-border
+        );
+        --x-skeleton-default-color-text: var(
+          --x-skeleton-color-schemes-scheme1-base-text
+        );
+        --x-skeleton-default-color-textContrast: var(
+          --x-skeleton-color-schemes-scheme1-base-textContrast
+        );
+        --x-skeleton-default-color-textSubdued: var(
+          --x-skeleton-color-schemes-scheme1-base-textSubdued
+        );
+        --x-skeleton-default-color-textSubdued200: var(
+          --x-skeleton-color-schemes-scheme1-base-textSubdued200
+        );
+
+        --x-skeleton-typography-line-small: 1.2;
+        --x-skeleton-typography-line-base: 1.5;
+        --x-skeleton-line-quantity-size: 2.1rem;
+
+        --x-skeleton-typography-size-small: 1.2rem;
+        --x-skeleton-typography-size-default: 1.4rem;
+        --x-skeleton-typography-size-medium: 1.5rem;
+        --x-skeleton-typography-size-large: 1.7rem;
+        --x-skeleton-typography-size-extra-extra-large: 2.4rem;
+
+        --x-skeleton-typography-primary-weight-bold: 500;
+        --x-skeleton-typography-primary-fonts: Helvetica Neue;
+
+        --x-skeleton-typography-secondary-weight-bold: 500;
+        --x-skeleton-typography-secondary-fonts: Helvetica Neue;
+
+        --x-skeleton-spacing-small-100: 1.1rem;
+        --x-skeleton-spacing-small-200: 0.9rem;
+        --x-skeleton-spacing-small-300: 0.7rem;
+        --x-skeleton-spacing-small-500: 0.3rem;
+        --x-skeleton-spacing-base: 1.4rem;
+        --x-skeleton-spacing-large-100: 1.7rem;
+        --x-skeleton-spacing-large-200: 2.1rem;
+        --x-skeleton-spacing-large-300: 2.6rem;
+        --x-skeleton-spacing-large-400: 3.2rem;
+        --x-skeleton-spacing-large-500: 3.8rem;
+
+        --x-skeleton-border-radius-none: 0;
+        --x-skeleton-border-radius-base: 5px;
+        --x-skeleton-border-radius-small: 2px;
+        --x-skeleton-border-radius-large: 10px;
+      }
+
+      *,
+      :after,
+      :before {
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        width: 100%;
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        font-size: 62.5%;
+        font-family: var(--x-skeleton-typography-primary-fonts);
+        line-height: var(--x-skeleton-typography-line-base);
+      }
+
+      body {
+        -webkit-font-smoothing: subpixel-antialiased;
+        overflow-wrap: break-word;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+
+      /* TODO: need to take it out of the accessibility tree, too? */
+      body.Loading > .LoadingShell {
+        opacity: 1;
+      }
+
+      .BlockStack {
+        display: grid;
+      }
+
+      .BlockStack--spacing-small500 {
+        gap: var(--x-skeleton-spacing-small-500);
+      }
+      .BlockStack--spacing-small300 {
+        gap: var(--x-skeleton-spacing-small-300);
+      }
+      .BlockStack--spacing-small100 {
+        gap: var(--x-skeleton-spacing-small-100);
+      }
+      .BlockStack--spacing-base {
+        gap: var(--x-skeleton-spacing-base);
+      }
+      .BlockStack--spacing-large100 {
+        gap: var(--x-skeleton-spacing-large-100);
+      }
+      .BlockStack--spacing-large200 {
+        gap: var(--x-skeleton-spacing-large-200);
+      }
+      .BlockStack--min-inline-size-full {
+        flex: 1;
+      }
+      .BlockStack--inline-alignment-center {
+        justify-items: center;
+      }
+
+      .Header__heading {
+        margin: 0;
+        font-size: var(--x-skeleton-typography-size-extra-extra-large);
+        font-weight: var(--x-skeleton-typography-secondary-weight-bold);
+        font-family: var(--x-skeleton-typography-secondary-fonts);
+        line-height: var(--x-skeleton-typography-line-small);
+      }
+
+      .Header__image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .CartIcon {
+        min-width: calc(var(--x-skeleton-typography-size-default) * 24 / 14);
+        min-height: calc(var(--x-skeleton-typography-size-default) * 24 / 14);
+        width: calc(var(--x-skeleton-typography-size-default) * 24 / 14);
+        height: calc(var(--x-skeleton-typography-size-default) * 24 / 14);
+        color: var(
+          --x-skeleton-color-schemes-scheme1-base-accent,
+          var(--x-skeleton--global-accent)
+        );
+      }
+
+      .CartIcon__svg {
+        display: block;
+        fill: none;
+        stroke: var(--x-skeleton-cart-color, currentColor);
+      }
+
+      .CartIcon__svg path,
+      .CartIcon__svg circle {
+        stroke-width: 1.4px;
+        vector-effect: non-scaling-stroke;
+      }
+
+      .InlineStack {
+        display: flex;
+        min-height: 100%;
+        min-width: 100%;
+      }
+      .InlineStack--spacing-base {
+        column-gap: var(--x-skeleton-spacing-base);
+      }
+
+      .InlineStack--spacing-small100 {
+        column-gap: var(--x-skeleton-spacing-small-100);
+      }
+
+      .InlineStack--spacing-large200 {
+        column-gap: var(--x-skeleton-spacing-large-200);
+      }
+      .InlineStack--inline-alignment-spaceBetween {
+        justify-content: space-between;
+      }
+      .InlineStack--block-alignment-start {
+        align-items: start;
+      }
+      .InlineStack--block-alignment-center {
+        align-items: center;
+      }
+
+      .Divider {
+        width: 100%;
+        height: 1px;
+        background-color: var(--x-skeleton-color-schemes-scheme1-base-border);
+      }
+
+      .SkeletonButton {
+        background-color: var(
+          --x-skeleton-color-schemes-scheme1-base-textSubdued200
+        );
+        border-radius: var(--x-skeleton-border-radius-base);
+        animation: SkeletonPulse 4000ms ease infinite;
+        width: 100%;
+      }
+      .SkeletonButtonInner {
+        width: 100%;
+        height: 4.8rem;
+      }
+
+      .SkeletonImage {
+        background-color: var(--x-skeleton-default-color-textSubdued200);
+        animation: SkeletonPulse 4000ms ease infinite;
+        width: 100%;
+      }
+      .SkeletonImage--corner-radius-small {
+        border-radius: var(--x-skeleton-border-radius-small);
+      }
+      .SkeletonImage--corner-radius-base {
+        border-radius: var(--x-skeleton-border-radius-base);
+      }
+      .SkeletonImage--corner-radius-large {
+        border-radius: var(--x-skeleton-border-radius-large);
+      }
+
+      .SkeletonImageInner {
+        width: 100%;
+        height: 100%;
+      }
+
+      @supports (aspect-ratio: 1) {
+        .SkeletonImage {
+          aspect-ratio: 1;
+        }
+      }
+      @supports not (aspect-ratio: 1) {
+        .SkeletonImage::before {
+          content: "";
+          height: 0;
+          display: block;
+          padding-bottom: 100%;
+          padding-bottom: calc(100% / 1);
+        }
+      }
+
+      .SkeletonText {
+        background-color: var(--x-skeleton-default-color-textSubdued200);
+        border-radius: var(--x-skeleton-border-radius-base);
+        animation: SkeletonPulse 4000ms ease infinite;
+      }
+      .SkeletonTextInner {
+        display: inline-block;
+      }
+      .SkeletonTextInner--inline-size-small {
+        width: 10ch;
+      }
+      .SkeletonTextInner--inline-size-base {
+        width: 20ch;
+      }
+      .SkeletonTextInner--inline-size-large {
+        width: 30ch;
+      }
+      .SkeletonTextInner--inline-size-full {
+        width: 100%;
+      }
+
+      .Icon {
+        fill: none;
+        color: var(--x-skeleton-default-color-border);
+        stroke: currentColor;
+      }
+
+      .Icon path {
+        vector-effect: non-scaling-stroke;
+        stroke-width: 1.4px;
+      }
+
+      .LoadingShellLineItems {
+        display: grid;
+        grid-auto-flow: row;
+        align-items: stretch;
+        gap: var(--x-skeleton-spacing-base);
+      }
+
+      .LoadingShellLine {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: var(--x-skeleton-spacing-base);
+        align-items: center;
+        font-size: var(--x-type-size-base);
+      }
+
+      .LoadingShellLineImageWrapper {
+        width: 6.4rem;
+        height: 6.4rem;
+        position: relative;
+      }
+
+      .LoadingShellLineImage {
+        width: 6.4rem;
+        height: 6.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+        background: var(--x-skeleton-default-color-backgroundSubdued);
+      }
+      .LoadingShellLineImage--border-full {
+        border: 1px solid var(--x-skeleton-default-color-border);
+      }
+      .LoadingShellLineImage--corner-radius-small {
+        border-radius: var(--x-skeleton-border-radius-small);
+      }
+      .LoadingShellLineImage--corner-radius-base {
+        border-radius: var(--x-skeleton-border-radius-base);
+      }
+      .LoadingShellLineImage--corner-radius-large {
+        border-radius: var(--x-skeleton-border-radius-large);
+      }
+
+      .LoadingShellLineImageIcon {
+        width: 3.3rem;
+        height: 3.3rem;
+      }
+
+      .LoadingShellLineQuantity {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(25%, -50%);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2.2rem;
+        min-height: 2.2rem;
+        padding: 0 var(--x-skeleton-spacing-small-300);
+        border-radius: 1.1rem;
+        background: var(--x-skeleton-default-color-textSubdued);
+        color: var(--x-skeleton-default-color-textContrast);
+        font-size: var(--x-skeleton-typography-size-small);
+        font-weight: 500;
+      }
+
+      .LoadingShellLineContent {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .LoadingShellLinePrice {
+        min-height: 6.4rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .Text {
+        font-size: var(--x-skeleton-typography-size-default);
+      }
+      .Text--size-small {
+        font-size: var(--x-skeleton-typography-size-small);
+      }
+      .Text--size-large {
+        font-size: var(--x-skeleton-typography-size-large);
+      }
+      .Text--size-extraExtraLarge {
+        font-size: var(--x-skeleton-typography-size-extra-extra-large);
+      }
+      .Text--appearance-subdued {
+        color: var(--x-skeleton-default-color-textSubdued);
+      }
+
+      .SkeletonExpressCheckoutButtons {
+        display: grid;
+        gap: var(--x-skeleton-spacing-small-100);
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .SkeletonExpressCheckoutButtons > *:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .SkeletonExpressCheckout {
+        margin-bottom: var(--x-skeleton-spacing-large-500);
+      }
+
+      .ExpressCheckoutDivider {
+        display: flex;
+        place-items: center;
+        height: 21px;
+        padding-top: calc(var(--x-skeleton-spacing-large-300) + 1px);
+      }
+
+      @media screen and (min-width: 750px) {
+        .SkeletonExpressCheckout {
+          margin-bottom: var(--x-skeleton-spacing-large-400);
+        }
+
+        .ExpressCheckoutDivider {
+          height: 21px;
+          padding-top: var(--x-skeleton-spacing-large-400);
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        .SkeletonExpressCheckoutButtons {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .SkeletonExpressCheckoutButtons > *:first-child {
+          grid-column: auto;
+        }
+      }
+
+      .LoadingShellHeader--banner {
+        background-position: 50% 50%;
+        background-size: cover;
+        background-image: var(--x-skeleton-banner-image);
+        --x-skeleton-header-shop-name-color: #fff;
+        --x-skeleton-cart-color: #fff;
+      }
+
+      .ColorScheme2 {
+        --x-skeleton-default-color-background: var(
+          --x-skeleton-color-schemes-scheme2-base-background
+        );
+        --x-skeleton-default-color-accent: var(
+          --x-skeleton-color-schemes-scheme2-base-accent
+        );
+        --x-skeleton-default-color-backgroundSubdued: var(
+          --x-skeleton-color-schemes-scheme2-base-backgroundSubdued
+        );
+        --x-skeleton-default-color-border: var(
+          --x-skeleton-color-schemes-scheme2-base-border
+        );
+        --x-skeleton-default-color-text: var(
+          --x-skeleton-color-schemes-scheme2-base-text
+        );
+        --x-skeleton-default-color-textContrast: var(
+          --x-skeleton-color-schemes-scheme2-base-textContrast
+        );
+        --x-skeleton-default-color-textSubdued: var(
+          --x-skeleton-color-schemes-scheme2-base-textSubdued
+        );
+        --x-skeleton-default-color-textSubdued200: var(
+          --x-skeleton-color-schemes-scheme2-base-textSubdued200
+        );
+
+        background-color: var(--x-skeleton-default-color-background);
+        color: var(--x-skeleton-default-color-text);
+      }
+
+      .VisuallyHidden {
+        border-width: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap;
+      }
+
+      .FadeIn {
+        opacity: 0;
+        animation: 400ms FadeIn 150ms forwards;
+      }
+
+      @keyframes FadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .LoadingShell {
+        position: absolute;
+        inset: 0;
+        z-index: 100000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        will-change: opacity;
+
+        display: grid;
+        min-height: 100vh;
+        font-size: var(--x-skeleton-typography-size-default);
+      }
+
+      .LoadingShellInner {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: minmax(auto, max-content) minmax(0, 1fr) minmax(
+            auto,
+            max-content
+          );
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-rows: 1fr;
+        grid-auto-columns: minmax(0, 1fr);
+
+        background-color: var(
+          --x-skeleton-color-schemes-scheme1-base-background
+        );
+      }
+
+      .LoadingShellHeader {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-rows: minmax(0, 1fr);
+        grid-auto-columns: 1fr;
+        border-bottom: 1px solid
+          var(--x-skeleton-color-schemes-scheme1-base-border);
+        color: var(
+          --x-skeleton-header-shop-name-color,
+          var(--x-skeleton-color-schemes-scheme1-base-text)
+        );
+      }
+
+      .NoBorder {
+        border: none;
+      }
+
+      .LoadingShellHeaderInner {
+        padding: var(--x-skeleton-spacing-large-200);
+      }
+
+      .Header {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: minmax(0, 1fr);
+        grid-auto-rows: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(auto, max-content);
+        grid-auto-columns: 1fr;
+        column-gap: var(--x-skeleton-spacing-large-500);
+        row-gap: var(--x-skeleton-spacing-large-500);
+        align-items: center;
+        align-content: center;
+      }
+      .Header--alignment-center {
+        grid-template-columns: minmax(auto, max-content) minmax(0, 1fr) minmax(
+            auto,
+            max-content
+          );
+      }
+      .Header--alignment-center .CartIcon:last-child {
+        visibility: hidden;
+      }
+      .Header--alignment-end {
+        grid-template-columns: minmax(auto, max-content) minmax(0, 1fr);
+      }
+
+      .LoadingShellHeaderInnerGap {
+        display: none;
+      }
+
+      .Header--alignment-center .Header__heading {
+        display: flex;
+        justify-content: center;
+      }
+      .Header--alignment-end .Header__heading {
+        display: flex;
+        justify-content: end;
+      }
+
+      .LoadingShellDisclosure {
+        background-color: var(
+          --x-skeleton-color-schemes-scheme1-base-backgroundSubdued
+        );
+      }
+
+      .LoadingShellDisclosureInner {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-rows: minmax(0, 1fr);
+        grid-auto-columns: 1fr;
+        justify-items: center;
+        justify-content: center;
+      }
+
+      .LoadingShellDisclosureInnerLayout {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(auto, max-content);
+        grid-auto-rows: minmax(0, 1fr);
+        grid-auto-columns: 1fr;
+        column-gap: var(--x-skeleton-spacing-small-200);
+        row-gap: var(--x-skeleton-spacing-small-200);
+        align-items: center;
+        align-content: center;
+
+        min-width: 100%;
+        padding: var(--x-skeleton-spacing-large-200);
+      }
+
+      .LoadingShellContent {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-rows: minmax(0, 1fr);
+        grid-auto-columns: minmax(0, 1fr);
+
+        min-height: 100%;
+      }
+
+      .LoadingShellSectionMain {
+        grid-column: span 2;
+        padding: var(--x-skeleton-spacing-large-200);
+        background-color: var(
+          --x-skeleton-color-schemes-scheme1-base-background
+        );
+        color: var(--x-skeleton-color-schemes-scheme1-base-text);
+      }
+
+      .LoadingShellSectionMainGap {
+        display: none;
+      }
+
+      .LoadingShellSectionMainContentHeader,
+      .LoadingShellSectionSecondaryContentHeader {
+        display: none;
+      }
+
+      .LoadingShellSectionSecondary {
+        display: none;
+        border-left: 1px solid var(--x-skeleton-default-color-border);
+      }
+
+      @keyframes SkeletonPulse {
+        50% {
+          opacity: 1;
+        }
+        75% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @media screen and (min-width: 750px) {
+        .LoadingShellHeader {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 61rem) minmax(0, 1fr);
+          grid-auto-columns: 1fr;
+        }
+
+        .LoadingShellHeaderInnerGap {
+          display: block;
+        }
+
+        .LoadingShellDisclosureInner {
+          grid-template-columns: minmax(0, 61rem);
+          grid-auto-columns: 1fr;
+        }
+
+        .LoadingShellContent {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 61rem) minmax(0, 1fr);
+          grid-auto-columns: 1fr;
+        }
+
+        .LoadingShellSectionMain {
+          grid-column: auto;
+        }
+
+        .LoadingShellSectionMainGap {
+          display: block;
+        }
+
+        .LoadingShellSectionMainContentInner {
+          width: 100%;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        .LoadingShellInner--header-position-start {
+          grid-template-rows: minmax(auto, max-content) minmax(0, 1fr) minmax(
+              auto,
+              max-content
+            );
+        }
+
+        .LoadingShellInner--header-position-inline,
+        .LoadingShellInner--header-position-inline_secondary {
+          grid-template-rows: minmax(0, 1fr);
+        }
+
+        .LoadingShellInner--header-position-inline .LoadingShellHeader,
+        .LoadingShellInner--header-position-inline_secondary
+          .LoadingShellHeader {
+          display: none;
+        }
+
+        .LoadingShellInner--header-position-inline
+          .LoadingShellSectionMainContentHeader,
+        .LoadingShellInner--header-position-inline_secondary
+          .LoadingShellSectionSecondaryContentHeader {
+          display: block;
+        }
+
+        .LoadingShellHeader {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 110.5rem) minmax(
+              0,
+              1fr
+            );
+          grid-auto-columns: 1fr;
+        }
+
+        .LoadingShellHeaderInner {
+          padding-left: calc(var(--x-skeleton-spacing-large-200) * 2);
+          padding-right: calc(var(--x-skeleton-spacing-large-200) * 2);
+        }
+
+        .LoadingShellHeaderInnerGap {
+          display: block;
+        }
+
+        .LoadingShellDisclosure {
+          display: none;
+        }
+
+        .LoadingShellContent {
+          grid-template-columns:
+            minmax(0, 1fr) minmax(0, 65rem) minmax(0, 45.5rem)
+            minmax(0, 1fr);
+          grid-auto-columns: 1fr;
+        }
+
+        .LoadingShellSectionMain {
+          grid-column: span 2;
+          padding: 0;
+        }
+
+        .LoadingShellSectionMainContent {
+          display: grid;
+          grid-auto-flow: row;
+          grid-template-rows: minmax(0, 1fr) minmax(auto, max-content);
+          grid-template-columns: minmax(0, 1fr);
+          grid-auto-rows: 1fr;
+          grid-auto-columns: minmax(0, 1fr);
+          justify-items: flex-end;
+        }
+
+        .LoadingShellSectionMainContentHeader {
+          padding-bottom: var(--x-skeleton-spacing-large-200);
+        }
+
+        .LoadingShellSectionMainContentHeaderInner {
+          padding-bottom: var(--x-skeleton-spacing-large-200);
+        }
+
+        .LoadingShellSectionSecondaryContentHeader {
+          padding-bottom: var(--x-skeleton-spacing-large-500);
+        }
+
+        .LoadingShellSectionMainContentInner {
+          padding: calc(var(--x-skeleton-spacing-large-200) * 2);
+          max-width: 65rem;
+        }
+
+        .LoadingShellSectionMainGap {
+          display: none;
+        }
+
+        .LoadingShellSectionSecondary {
+          display: block;
+          grid-column: span 2;
+        }
+
+        .LoadingShellSectionSecondaryContent {
+          padding: var(--x-skeleton-spacing-large-200);
+          max-width: 45.5rem;
+        }
+
+        .LoadingShellSectionSecondaryContentInner {
+          padding: var(--x-skeleton-spacing-large-200);
+          max-width: 45.5rem;
+        }
+      }
+    </style>
+    <div class="LoadingShell">
+      <div class="LoadingShellInner">
+        <div class="LoadingShellHeader">
+          <div class="LoadingShellHeaderInnerGap"></div>
+          <div class="LoadingShellHeaderInner">
+            <header class="Header">
+              <h1 class="Header__heading">Shinkansen-Ticket.com</h1>
+              <div class="CartIcon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 14 14"
+                  class="CartIcon__svg"
+                >
+                  <path
+                    d="M2.675 10.037 3.072 4.2h7.856l.397 5.837A2.4 2.4 0 0 1 8.931 12.6H5.069a2.4 2.4 0 0 1-2.394-2.563Z"
+                  ></path>
+                  <path
+                    d="M4.9 3.5a2.1 2.1 0 1 1 4.2 0v1.4a2.1 2.1 0 0 1-4.2 0V3.5Z"
+                  ></path>
+                </svg>
+              </div>
+            </header>
+          </div>
+          <div class="LoadingShellHeaderInnerGap"></div>
+        </div>
+        <div>
+          <aside class="LoadingShellDisclosure">
+            <div class="LoadingShellDisclosureInner">
+              <div class="LoadingShellDisclosureInnerLayout FadeIn">
+                <span class="Text Text--size-small"
+                  ><span class="SkeletonText"
+                    ><span
+                      class="SkeletonTextInner SkeletonTextInner--inline-size-base"
+                      ><span></span></span></span></span
+                ><span class="Text Text--size-large"
+                  ><span class="SkeletonText"
+                    ><span
+                      class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                      ><span></span></span></span
+                ></span>
+              </div>
+            </div>
+          </aside>
+          <div class="LoadingShellContent">
+            <div class="LoadingShellSectionMainGap"></div>
+            <div class="LoadingShellSectionMain FadeIn">
+              <div class="LoadingShellSectionMainContent">
+                <div class="LoadingShellSectionMainContentInner">
+                  <div class="SkeletonExpressCheckout">
+                    <div class="BlockStack BlockStack--spacing-base">
+                      <div
+                        class="BlockStack BlockStack--inline-alignment-center BlockStack--spacing-base"
+                      >
+                        <span class="Text"
+                          ><span class="SkeletonText"
+                            ><span
+                              class="SkeletonTextInner SkeletonTextInner--inline-size-base"
+                              ><span></span></span></span
+                        ></span>
+                      </div>
+                      <div class="SkeletonExpressCheckoutButtons">
+                        <div class="SkeletonButton">
+                          <div class="SkeletonButtonInner"></div>
+                        </div>
+                        <div class="SkeletonButton">
+                          <div class="SkeletonButtonInner"></div>
+                        </div>
+                        <div class="SkeletonButton">
+                          <div class="SkeletonButtonInner"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ExpressCheckoutDivider">
+                      <div class="Divider"></div>
+                    </div>
+                  </div>
+                  <div class="BlockStack BlockStack--spacing-large200">
+                    <div class="BlockStack BlockStack--spacing-base">
+                      <span class="Text Text--size-large"
+                        ><span class="SkeletonText"
+                          ><span
+                            class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                            ><span></span></span></span
+                      ></span>
+                      <div class="BlockStack BlockStack--spacing-small300">
+                        <span class="Text Text--size-small"
+                          ><span class="SkeletonText"
+                            ><span
+                              class="SkeletonTextInner SkeletonTextInner--inline-size-full"
+                              ><span></span></span></span></span
+                        ><span class="Text Text--size-small"
+                          ><span class="SkeletonText"
+                            ><span
+                              class="SkeletonTextInner SkeletonTextInner--inline-size-full"
+                              ><span></span></span></span
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="Divider"></div>
+                    <div class="BlockStack BlockStack--spacing-base">
+                      <span class="Text Text--size-large"
+                        ><span class="SkeletonText"
+                          ><span
+                            class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                            ><span></span></span></span
+                      ></span>
+                      <div class="BlockStack BlockStack--spacing-small300">
+                        <span class="Text Text--size-small"
+                          ><span class="SkeletonText"
+                            ><span
+                              class="SkeletonTextInner SkeletonTextInner--inline-size-full"
+                              ><span></span></span></span></span
+                        ><span class="Text Text--size-small"
+                          ><span class="SkeletonText"
+                            ><span
+                              class="SkeletonTextInner SkeletonTextInner--inline-size-full"
+                              ><span></span></span></span
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="LoadingShellSectionSecondary ColorScheme2">
+              <div class="LoadingShellSectionSecondaryContent">
+                <div class="LoadingShellSectionSecondaryContentInner">
+                  <div class="FadeIn">
+                    <div class="BlockStack BlockStack--spacing-large200">
+                      <h2 class="VisuallyHidden"></h2>
+                      <div class="LoadingShellLineItems">
+                        <div class="LoadingShellLine">
+                          <div class="LoadingShellLineImageWrapper">
+                            <div
+                              class="SkeletonImage SkeletonImage--corner-radius-base"
+                            >
+                              <span class="SkeletonImageInner"></span>
+                            </div>
+                          </div>
+                          <div class="LoadingShellLineContent">
+                            <div
+                              class="BlockStack BlockStack--spacing-small500"
+                            >
+                              <span class="Text Text--size-small"
+                                ><span class="SkeletonText"
+                                  ><span
+                                    class="SkeletonTextInner SkeletonTextInner--inline-size-base"
+                                    ><span></span></span></span></span
+                              ><span class="Text Text--size-small"
+                                ><span class="SkeletonText"
+                                  ><span
+                                    class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                                    ><span></span></span></span
+                              ></span>
+                            </div>
+                          </div>
+                          <div class="LoadingShellLinePrice">
+                            <span class="Text Text--size-small"
+                              ><span class="SkeletonText"
+                                ><span
+                                  class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                                  ><span></span></span></span
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="BlockStack BlockStack--spacing-small100">
+                        <div
+                          class="InlineStack InlineStack--spacing-base InlineStack--block-alignment-start InlineStack--inline-alignment-spaceBetween"
+                        >
+                          <span class="Text Text--size-small"
+                            ><span class="SkeletonText"
+                              ><span
+                                class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                                ><span></span></span></span></span
+                          ><span class="Text Text--size-small"
+                            ><span class="SkeletonText"
+                              ><span
+                                class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                                ><span></span></span></span
+                          ></span>
+                        </div>
+                        <div
+                          class="InlineStack InlineStack--spacing-base InlineStack--block-alignment-start InlineStack--inline-alignment-spaceBetween"
+                        >
+                          <span class="Text Text--size-small"
+                            ><span class="SkeletonText"
+                              ><span
+                                class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                                ><span></span></span></span></span
+                          ><span class="Text Text--size-small"
+                            ><span class="SkeletonText"
+                              ><span
+                                class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                                ><span></span></span></span
+                          ></span>
+                        </div>
+                        <div
+                          class="InlineStack InlineStack--spacing-base InlineStack--block-alignment-start InlineStack--inline-alignment-spaceBetween"
+                        >
+                          <span class="Text Text--size-small"
+                            ><span class="SkeletonText"
+                              ><span
+                                class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                                ><span></span></span></span></span
+                          ><span class="Text Text--size-small"
+                            ><span class="SkeletonText"
+                              ><span
+                                class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                                ><span></span></span></span
+                          ></span>
+                        </div>
+                        <div
+                          class="InlineStack InlineStack--spacing-base InlineStack--block-alignment-start InlineStack--inline-alignment-spaceBetween"
+                        >
+                          <span class="Text Text--size-large"
+                            ><span class="SkeletonText"
+                              ><span
+                                class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                                ><span></span></span></span></span
+                          ><span class="Text Text--size-large"
+                            ><span class="SkeletonText"
+                              ><span
+                                class="SkeletonTextInner SkeletonTextInner--inline-size-small"
+                                ><span></span></span></span
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="LoadingShellSectionMainGap"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/runtime.latest.en.5878278c4e132af2d28a.js"
+      defer
+      crossorigin
+    ></script>
+    <script
+      src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/996.latest.en.c71ef869860f9432601b.js"
+      defer
+      crossorigin
+    ></script>
+    <script
+      src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/216.latest.en.57aea0efbb920d27f647.js"
+      defer
+      crossorigin
+    ></script>
+    <script
+      src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/40.latest.en.6e4ad2417d30e0301c3a.js"
+      defer
+      crossorigin
+    ></script>
+    <script
+      src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.f52e29da62669daf452a.js"
+      defer
+      crossorigin
+    ></script>
+    <script
+      src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/240.latest.en.d48b54ea867b809eedba.js"
+      defer
+      crossorigin
+    ></script>
+    <script
+      src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/904.latest.en.2f8c98fc8bcbebfaeed4.js"
+      defer
+      crossorigin
+    ></script>
+    <script
+      src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/504.latest.en.de93c1fadb52d236855e.js"
+      defer
+      crossorigin
+    ></script>
+    <script
+      src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/OnePage.latest.en.ab8194cdc8b8f5ffc80b.js"
+      defer
+      crossorigin
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/996.latest.en.03ad0d362217a7eb7adf.css"
+      crossorigin
+    /><link
+      rel="stylesheet"
+      href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.e5a7f63ca146c0549466.css"
+      crossorigin
+    /><link
+      rel="stylesheet"
+      href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/904.latest.en.4d273af8acf76b1eb555.css"
+      crossorigin
+    /><link
+      rel="stylesheet"
+      href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/457.latest.en.1ad809edb4f0b887b41f.css"
+      crossorigin
+    />
+    <script>
+      document.cookie =
+        "queue_token=" +
+        "AuF6hWAVwYLlNpEu9ArIMtq7_yst0ugfKN2hwNCfUkBiQVT0eIOfIk52gDnuLsNvLxfP58xqyEqVSbK5sk4YiagX2LKOHaLFfUTE0ZYa2cjJmdawKV1XpOqAyBUNJqHAlhG6PZlu8hejq2-oJuuks860zLuiz9T26oPS56TSDArFYAx_yWmD" +
+        "; path=/; max-age=3300";
+    </script>
+    <meta
+      name="serialized-session-token"
+      content='"M0YrRHV6V3NQT0JBTHJabk95VUZ5MlN1NGFFb2RYSFZwbE1MbS8zTTVVdDEzZWdzTUR3REo1UWl4d1l3WE52RTBDLzdJZUhXVHJFNEN0dlhUbkZLT0xNN0gyTHV4M3U3bHNSTStSM201SHYvWk9NOEQ2RDhZSXR2Mi9rT3lRMXBlV0kyeXFtbU5JZk82MHVWNFhBSGhON1d3R3I3ZHkzbXdQWXlqZWJNdEFqZTBzVzJuRDJQTDl4Wkx6ZXpuZXY2SzFqK0swQVdJSXBjalFSaDBLRldFOVlxdU1ReHdVT1hJSXRkb0UxN280Q25Sd2tMRjhtUG5tN1NONHRPUTc3SGRNQnRpdEk9LS1haVY0U2oxRExzaTdzd1k4LS1VbjlGQUtJSW03TmhjZmJKa0F1L3pnPT0"'
+    /><meta
+      name="serialized-source-token"
+      content='"c1-504a028a54ba6687cbfa89265899de7a"'
+    /><meta
+      name="serialized-checkout-session-identifier"
+      content='"7a9a17c7c6022e8753a517f1f10596f6"'
+    /><meta
+      name="serialized-queue-token"
+      content='"AvX2E1uGlL_suIgK7XR0H5Kf3aHX8u3fRSUYNDrHjJFv5U4HR4b2ND_optP_RbjMsWDOKEzrd4XAy1UPk1wpfZfJlKBTl0FFYMEn69OjdVtduFPug2f9RVSxEX9PMa7Bo3H-ZsQx2yJb5mi0TFFpC_lPVf_9fP5k3umOHACdg_9hpdTjOmoS"'
+    /><meta
+      name="serialized-graphql"
+      content='{"5638616fb05cb50fa18d4cba4335a74898a1bfebfdc79a784e07dacd23898e17{}":{"shop":{"id":"gid://shopify/Shop/12176360","shippingCountries":[{"value":"AF","label":"Afghanistan","__typename":"Country"},{"value":"AX","label":"Åland Islands","__typename":"Country"},{"value":"AL","label":"Albania","__typename":"Country"},{"value":"DZ","label":"Algeria","__typename":"Country"},{"value":"AD","label":"Andorra","__typename":"Country"},{"value":"AO","label":"Angola","__typename":"Country"},{"value":"AI","label":"Anguilla","__typename":"Country"},{"value":"AG","label":"Antigua &amp; Barbuda","__typename":"Country"},{"value":"AR","label":"Argentina","__typename":"Country"},{"value":"AM","label":"Armenia","__typename":"Country"},{"value":"AW","label":"Aruba","__typename":"Country"},{"value":"AC","label":"Ascension Island","__typename":"Country"},{"value":"AU","label":"Australia","__typename":"Country"},{"value":"AT","label":"Austria","__typename":"Country"},{"value":"AZ","label":"Azerbaijan","__typename":"Country"},{"value":"BS","label":"Bahamas","__typename":"Country"},{"value":"BH","label":"Bahrain","__typename":"Country"},{"value":"BD","label":"Bangladesh","__typename":"Country"},{"value":"BB","label":"Barbados","__typename":"Country"},{"value":"BY","label":"Belarus","__typename":"Country"},{"value":"BE","label":"Belgium","__typename":"Country"},{"value":"BZ","label":"Belize","__typename":"Country"},{"value":"BJ","label":"Benin","__typename":"Country"},{"value":"BM","label":"Bermuda","__typename":"Country"},{"value":"BT","label":"Bhutan","__typename":"Country"},{"value":"BO","label":"Bolivia","__typename":"Country"},{"value":"BA","label":"Bosnia &amp; Herzegovina","__typename":"Country"},{"value":"BW","label":"Botswana","__typename":"Country"},{"value":"BR","label":"Brazil","__typename":"Country"},{"value":"IO","label":"British Indian Ocean Territory","__typename":"Country"},{"value":"VG","label":"British Virgin Islands","__typename":"Country"},{"value":"BN","label":"Brunei","__typename":"Country"},{"value":"BG","label":"Bulgaria","__typename":"Country"},{"value":"BF","label":"Burkina Faso","__typename":"Country"},{"value":"BI","label":"Burundi","__typename":"Country"},{"value":"KH","label":"Cambodia","__typename":"Country"},{"value":"CM","label":"Cameroon","__typename":"Country"},{"value":"CA","label":"Canada","__typename":"Country"},{"value":"CV","label":"Cape Verde","__typename":"Country"},{"value":"BQ","label":"Caribbean Netherlands","__typename":"Country"},{"value":"KY","label":"Cayman Islands","__typename":"Country"},{"value":"CF","label":"Central African Republic","__typename":"Country"},{"value":"TD","label":"Chad","__typename":"Country"},{"value":"CL","label":"Chile","__typename":"Country"},{"value":"CN","label":"China","__typename":"Country"},{"value":"CX","label":"Christmas Island","__typename":"Country"},{"value":"CC","label":"Cocos (Keeling) Islands","__typename":"Country"},{"value":"CO","label":"Colombia","__typename":"Country"},{"value":"KM","label":"Comoros","__typename":"Country"},{"value":"CG","label":"Congo - Brazzaville","__typename":"Country"},{"value":"CD","label":"Congo - Kinshasa","__typename":"Country"},{"value":"CK","label":"Cook Islands","__typename":"Country"},{"value":"CR","label":"Costa Rica","__typename":"Country"},{"value":"HR","label":"Croatia","__typename":"Country"},{"value":"CW","label":"Curaçao","__typename":"Country"},{"value":"CY","label":"Cyprus","__typename":"Country"},{"value":"CZ","label":"Czechia","__typename":"Country"},{"value":"CI","label":"Côte d’Ivoire","__typename":"Country"},{"value":"DK","label":"Denmark","__typename":"Country"},{"value":"DJ","label":"Djibouti","__typename":"Country"},{"value":"DM","label":"Dominica","__typename":"Country"},{"value":"DO","label":"Dominican Republic","__typename":"Country"},{"value":"EC","label":"Ecuador","__typename":"Country"},{"value":"EG","label":"Egypt","__typename":"Country"},{"value":"SV","label":"El Salvador","__typename":"Country"},{"value":"GQ","label":"Equatorial Guinea","__typename":"Country"},{"value":"ER","label":"Eritrea","__typename":"Country"},{"value":"EE","label":"Estonia","__typename":"Country"},{"value":"SZ","label":"Eswatini","__typename":"Country"},{"value":"ET","label":"Ethiopia","__typename":"Country"},{"value":"FK","label":"Falkland Islands","__typename":"Country"},{"value":"FO","label":"Faroe Islands","__typename":"Country"},{"value":"FJ","label":"Fiji","__typename":"Country"},{"value":"FI","label":"Finland","__typename":"Country"},{"value":"FR","label":"France","__typename":"Country"},{"value":"GF","label":"French Guiana","__typename":"Country"},{"value":"PF","label":"French Polynesia","__typename":"Country"},{"value":"TF","label":"French Southern Territories","__typename":"Country"},{"value":"GA","label":"Gabon","__typename":"Country"},{"value":"GM","label":"Gambia","__typename":"Country"},{"value":"GE","label":"Georgia","__typename":"Country"},{"value":"DE","label":"Germany","__typename":"Country"},{"value":"GH","label":"Ghana","__typename":"Country"},{"value":"GI","label":"Gibraltar","__typename":"Country"},{"value":"GR","label":"Greece","__typename":"Country"},{"value":"GL","label":"Greenland","__typename":"Country"},{"value":"GD","label":"Grenada","__typename":"Country"},{"value":"GP","label":"Guadeloupe","__typename":"Country"},{"value":"GT","label":"Guatemala","__typename":"Country"},{"value":"GG","label":"Guernsey","__typename":"Country"},{"value":"GN","label":"Guinea","__typename":"Country"},{"value":"GW","label":"Guinea-Bissau","__typename":"Country"},{"value":"GY","label":"Guyana","__typename":"Country"},{"value":"HT","label":"Haiti","__typename":"Country"},{"value":"HN","label":"Honduras","__typename":"Country"},{"value":"HK","label":"Hong Kong SAR","__typename":"Country"},{"value":"HU","label":"Hungary","__typename":"Country"},{"value":"IS","label":"Iceland","__typename":"Country"},{"value":"IN","label":"India","__typename":"Country"},{"value":"ID","label":"Indonesia","__typename":"Country"},{"value":"IQ","label":"Iraq","__typename":"Country"},{"value":"IE","label":"Ireland","__typename":"Country"},{"value":"IM","label":"Isle of Man","__typename":"Country"},{"value":"IL","label":"Israel","__typename":"Country"},{"value":"IT","label":"Italy","__typename":"Country"},{"value":"JM","label":"Jamaica","__typename":"Country"},{"value":"JP","label":"Japan","__typename":"Country"},{"value":"JE","label":"Jersey","__typename":"Country"},{"value":"JO","label":"Jordan","__typename":"Country"},{"value":"KZ","label":"Kazakhstan","__typename":"Country"},{"value":"KE","label":"Kenya","__typename":"Country"},{"value":"KI","label":"Kiribati","__typename":"Country"},{"value":"XK","label":"Kosovo","__typename":"Country"},{"value":"KW","label":"Kuwait","__typename":"Country"},{"value":"KG","label":"Kyrgyzstan","__typename":"Country"},{"value":"LA","label":"Laos","__typename":"Country"},{"value":"LV","label":"Latvia","__typename":"Country"},{"value":"LB","label":"Lebanon","__typename":"Country"},{"value":"LS","label":"Lesotho","__typename":"Country"},{"value":"LR","label":"Liberia","__typename":"Country"},{"value":"LY","label":"Libya","__typename":"Country"},{"value":"LI","label":"Liechtenstein","__typename":"Country"},{"value":"LT","label":"Lithuania","__typename":"Country"},{"value":"LU","label":"Luxembourg","__typename":"Country"},{"value":"MO","label":"Macao SAR","__typename":"Country"},{"value":"MG","label":"Madagascar","__typename":"Country"},{"value":"MW","label":"Malawi","__typename":"Country"},{"value":"MY","label":"Malaysia","__typename":"Country"},{"value":"MV","label":"Maldives","__typename":"Country"},{"value":"ML","label":"Mali","__typename":"Country"},{"value":"MT","label":"Malta","__typename":"Country"},{"value":"MQ","label":"Martinique","__typename":"Country"},{"value":"MR","label":"Mauritania","__typename":"Country"},{"value":"MU","label":"Mauritius","__typename":"Country"},{"value":"YT","label":"Mayotte","__typename":"Country"},{"value":"MX","label":"Mexico","__typename":"Country"},{"value":"MD","label":"Moldova","__typename":"Country"},{"value":"MC","label":"Monaco","__typename":"Country"},{"value":"MN","label":"Mongolia","__typename":"Country"},{"value":"ME","label":"Montenegro","__typename":"Country"},{"value":"MS","label":"Montserrat","__typename":"Country"},{"value":"MA","label":"Morocco","__typename":"Country"},{"value":"MZ","label":"Mozambique","__typename":"Country"},{"value":"MM","label":"Myanmar (Burma)","__typename":"Country"},{"value":"NA","label":"Namibia","__typename":"Country"},{"value":"NR","label":"Nauru","__typename":"Country"},{"value":"NP","label":"Nepal","__typename":"Country"},{"value":"NL","label":"Netherlands","__typename":"Country"},{"value":"NC","label":"New Caledonia","__typename":"Country"},{"value":"NZ","label":"New Zealand","__typename":"Country"},{"value":"NI","label":"Nicaragua","__typename":"Country"},{"value":"NE","label":"Niger","__typename":"Country"},{"value":"NG","label":"Nigeria","__typename":"Country"},{"value":"NU","label":"Niue","__typename":"Country"},{"value":"NF","label":"Norfolk Island","__typename":"Country"},{"value":"MK","label":"North Macedonia","__typename":"Country"},{"value":"NO","label":"Norway","__typename":"Country"},{"value":"OM","label":"Oman","__typename":"Country"},{"value":"PK","label":"Pakistan","__typename":"Country"},{"value":"PS","label":"Palestinian Territories","__typename":"Country"},{"value":"PA","label":"Panama","__typename":"Country"},{"value":"PG","label":"Papua New Guinea","__typename":"Country"},{"value":"PY","label":"Paraguay","__typename":"Country"},{"value":"PE","label":"Peru","__typename":"Country"},{"value":"PH","label":"Philippines","__typename":"Country"},{"value":"PN","label":"Pitcairn Islands","__typename":"Country"},{"value":"PL","label":"Poland","__typename":"Country"},{"value":"PT","label":"Portugal","__typename":"Country"},{"value":"QA","label":"Qatar","__typename":"Country"},{"value":"RE","label":"Réunion","__typename":"Country"},{"value":"RO","label":"Romania","__typename":"Country"},{"value":"RU","label":"Russia","__typename":"Country"},{"value":"RW","label":"Rwanda","__typename":"Country"},{"value":"WS","label":"Samoa","__typename":"Country"},{"value":"SM","label":"San Marino","__typename":"Country"},{"value":"ST","label":"São Tomé &amp; Príncipe","__typename":"Country"},{"value":"SA","label":"Saudi Arabia","__typename":"Country"},{"value":"SN","label":"Senegal","__typename":"Country"},{"value":"RS","label":"Serbia","__typename":"Country"},{"value":"SC","label":"Seychelles","__typename":"Country"},{"value":"SL","label":"Sierra Leone","__typename":"Country"},{"value":"SG","label":"Singapore","__typename":"Country"},{"value":"SX","label":"Sint Maarten","__typename":"Country"},{"value":"SK","label":"Slovakia","__typename":"Country"},{"value":"SI","label":"Slovenia","__typename":"Country"},{"value":"SB","label":"Solomon Islands","__typename":"Country"},{"value":"SO","label":"Somalia","__typename":"Country"},{"value":"ZA","label":"South Africa","__typename":"Country"},{"value":"GS","label":"South Georgia &amp; South Sandwich Islands","__typename":"Country"},{"value":"KR","label":"South Korea","__typename":"Country"},{"value":"SS","label":"South Sudan","__typename":"Country"},{"value":"ES","label":"Spain","__typename":"Country"},{"value":"LK","label":"Sri Lanka","__typename":"Country"},{"value":"BL","label":"St. Barthélemy","__typename":"Country"},{"value":"SH","label":"St. Helena","__typename":"Country"},{"value":"KN","label":"St. Kitts &amp; Nevis","__typename":"Country"},{"value":"LC","label":"St. Lucia","__typename":"Country"},{"value":"MF","label":"St. Martin","__typename":"Country"},{"value":"PM","label":"St. Pierre &amp; Miquelon","__typename":"Country"},{"value":"VC","label":"St. Vincent &amp; Grenadines","__typename":"Country"},{"value":"SD","label":"Sudan","__typename":"Country"},{"value":"SR","label":"Suriname","__typename":"Country"},{"value":"SJ","label":"Svalbard &amp; Jan Mayen","__typename":"Country"},{"value":"SE","label":"Sweden","__typename":"Country"},{"value":"CH","label":"Switzerland","__typename":"Country"},{"value":"TW","label":"Taiwan","__typename":"Country"},{"value":"TJ","label":"Tajikistan","__typename":"Country"},{"value":"TZ","label":"Tanzania","__typename":"Country"},{"value":"TH","label":"Thailand","__typename":"Country"},{"value":"TL","label":"Timor-Leste","__typename":"Country"},{"value":"TG","label":"Togo","__typename":"Country"},{"value":"TK","label":"Tokelau","__typename":"Country"},{"value":"TO","label":"Tonga","__typename":"Country"},{"value":"TT","label":"Trinidad &amp; Tobago","__typename":"Country"},{"value":"TA","label":"Tristan da Cunha","__typename":"Country"},{"value":"TN","label":"Tunisia","__typename":"Country"},{"value":"TR","label":"Türkiye","__typename":"Country"},{"value":"TM","label":"Turkmenistan","__typename":"Country"},{"value":"TC","label":"Turks &amp; Caicos Islands","__typename":"Country"},{"value":"TV","label":"Tuvalu","__typename":"Country"},{"value":"UM","label":"U.S. Outlying Islands","__typename":"Country"},{"value":"UG","label":"Uganda","__typename":"Country"},{"value":"UA","label":"Ukraine","__typename":"Country"},{"value":"AE","label":"United Arab Emirates","__typename":"Country"},{"value":"GB","label":"United Kingdom","__typename":"Country"},{"value":"US","label":"United States","__typename":"Country"},{"value":"UY","label":"Uruguay","__typename":"Country"},{"value":"UZ","label":"Uzbekistan","__typename":"Country"},{"value":"VU","label":"Vanuatu","__typename":"Country"},{"value":"VA","label":"Vatican City","__typename":"Country"},{"value":"VE","label":"Venezuela","__typename":"Country"},{"value":"VN","label":"Vietnam","__typename":"Country"},{"value":"WF","label":"Wallis &amp; Futuna","__typename":"Country"},{"value":"EH","label":"Western Sahara","__typename":"Country"},{"value":"YE","label":"Yemen","__typename":"Country"},{"value":"ZM","label":"Zambia","__typename":"Country"},{"value":"ZW","label":"Zimbabwe","__typename":"Country"}],"__typename":"CheckoutShopConfig"}},"6b3fc7eaad5a75354e75faeeddee28a1f369b6edeb165f70418872e2c35fb565{}":{"shop":{"id":"gid://shopify/Shop/12176360","designSystem":{"colors":{"global":{"brand":"hsl(17.9, 99.734%, 57.916%)","accent":"hsl(211.495, 80.759%, 72.483%)","decorative":null,"success":null,"warning":null,"critical":"hsl(12.177, 100.0%, 64.407%)","info":null,"__typename":"ColorGlobal"},"schemes":{"scheme1":{"base":{"background":"hsl(19.916, 0.0%, 100.0%)","text":null,"border":null,"icon":null,"accent":"hsl(211.495, 80.759%, 72.483%)","decorative":null,"__typename":"ColorRoles"},"control":null,"primaryButton":null,"secondaryButton":null,"__typename":"ColorScheme"},"scheme2":{"base":{"background":"hsl(18.435, 0.0%, 98.272%)","text":null,"border":null,"icon":null,"accent":"hsl(211.495, 80.759%, 72.483%)","decorative":null,"__typename":"ColorRoles"},"control":null,"primaryButton":null,"secondaryButton":null,"__typename":"ColorScheme"},"__typename":"ColorSchemes"},"__typename":"Colors"},"typography":{"size":null,"primary":{"name":"Helvetica Neue","loadingStrategy":null,"base":{"weight":400,"sources":null,"preloadUrl":null,"style":"normal","__typename":"Font"},"bold":{"weight":500,"sources":null,"preloadUrl":null,"style":"normal","__typename":"Font"},"__typename":"FontGroup"},"secondary":{"name":"Helvetica Neue","loadingStrategy":null,"base":{"weight":400,"sources":null,"preloadUrl":null,"style":"normal","__typename":"Font"},"bold":{"weight":500,"sources":null,"preloadUrl":null,"style":"normal","__typename":"Font"},"__typename":"FontGroup"},"__typename":"Typography"},"cornerRadius":null,"__typename":"DesignSystem"},"customizations":null,"__typename":"CheckoutShopConfig"}},"453ef95afc33a45d82eb7a8cb8644b65b31942d9e43a99e06e794c0415701456{}":{"shop":{"hostedFieldsUrl":"https://checkout.shopifycs.com/dist/card_fields.js","domain":"shinkansen-ticket.com","name":"Shinkansen-Ticket.com","id":"gid://shopify/Shop/12176360","merchantPolicies":[{"handle":"refund-policy","url":"https://shinkansen-ticket.com/12176360/policies/refund-policy.html?locale=en-UZ","__typename":"MerchantPolicy"},{"handle":"privacy-policy","url":"https://shinkansen-ticket.com/12176360/policies/privacy-policy.html?locale=en-UZ","__typename":"MerchantPolicy"},{"handle":"terms-of-service","url":"https://shinkansen-ticket.com/12176360/policies/terms-of-service.html?locale=en-UZ","__typename":"MerchantPolicy"}],"country":{"code":"JP","name":"Japan","localizationKeys":{"address2":null,"postalCode":null,"zone":"prefecture_label","__typename":"AddressLocalizationKeys"},"labels":{"firstName":"First name","lastName":"Last name","company":"Company","address1":"Address","address2":"Apartment, suite, etc.","city":"City/ward/town/village","country":"Country/region","zone":"Prefecture","postalCode":"Postal code","phone":"Phone","__typename":"AddressLabels"},"zones":[{"code":"JP-01","name":"Hokkaido","nameWithAlternates":["Hokkaidō","Hokkaido","Hokkaido Prefecture","北海道"],"__typename":"AddressZone"},{"code":"JP-02","name":"Aomori","nameWithAlternates":["Aomori","Aomori Prefecture","Aomori-ken","青森県","青森"],"__typename":"AddressZone"},{"code":"JP-03","name":"Iwate","nameWithAlternates":["Iwate","Iwate Prefecture","Iwate-ken","岩手県","岩手"],"__typename":"AddressZone"},{"code":"JP-04","name":"Miyagi","nameWithAlternates":["Miyagi","Miyagi Prefecture","Miyagi-ken","宮城県","宮城"],"__typename":"AddressZone"},{"code":"JP-05","name":"Akita","nameWithAlternates":["Akita","Akita Prefecture","Akita-ken","秋田県","秋田"],"__typename":"AddressZone"},{"code":"JP-06","name":"Yamagata","nameWithAlternates":["Yamagata","Yamagata Prefecture","Yamagata-ken","山形県","山形"],"__typename":"AddressZone"},{"code":"JP-07","name":"Fukushima","nameWithAlternates":["Fukushima","Fukushima Prefecture","Fukushima-ken","福島県","福島"],"__typename":"AddressZone"},{"code":"JP-08","name":"Ibaraki","nameWithAlternates":["Ibaraki","Ibaraki Prefecture","Ibaraki-ken","茨城県","茨城"],"__typename":"AddressZone"},{"code":"JP-09","name":"Tochigi","nameWithAlternates":["Tochigi","Tochigi Prefecture","Tochigi-ken","栃木県","栃木"],"__typename":"AddressZone"},{"code":"JP-10","name":"Gunma","nameWithAlternates":["Gunma","Gunma Prefecture","Gunma-ken","群馬県","群馬"],"__typename":"AddressZone"},{"code":"JP-11","name":"Saitama","nameWithAlternates":["Saitama","Saitama Prefecture","Saitama-ken","埼玉県","埼玉"],"__typename":"AddressZone"},{"code":"JP-12","name":"Chiba","nameWithAlternates":["Chiba","Chiba Prefecture","Chiba-ken","千葉県","千葉"],"__typename":"AddressZone"},{"code":"JP-13","name":"Tokyo","nameWithAlternates":["Tōkyō","Tokyo","Tokyo Prefecture","Tōkyō-to","東京都","東京"],"__typename":"AddressZone"},{"code":"JP-14","name":"Kanagawa","nameWithAlternates":["Kanagawa","Kanagawa Prefecture","Kanagawa-ken","神奈川県","神奈川"],"__typename":"AddressZone"},{"code":"JP-15","name":"Niigata","nameWithAlternates":["Niigata","Niigata Prefecture","Niigata-ken","新潟県","新潟"],"__typename":"AddressZone"},{"code":"JP-16","name":"Toyama","nameWithAlternates":["Toyama","Toyama Prefecture","Toyama-ken","富山県","富山"],"__typename":"AddressZone"},{"code":"JP-17","name":"Ishikawa","nameWithAlternates":["Ishikawa","Ishikawa Prefecture","Ishikawa-ken","石川県","石川"],"__typename":"AddressZone"},{"code":"JP-18","name":"Fukui","nameWithAlternates":["Fukui","Fukui Prefecture","Fukui-ken","福井県","福井"],"__typename":"AddressZone"},{"code":"JP-19","name":"Yamanashi","nameWithAlternates":["Yamanashi","Yamanashi Prefecture","Yamanashi-ken","山梨県","山梨"],"__typename":"AddressZone"},{"code":"JP-20","name":"Nagano","nameWithAlternates":["Nagano","Nagano Prefecture","Nagano-ken","長野県","長野"],"__typename":"AddressZone"},{"code":"JP-21","name":"Gifu","nameWithAlternates":["Gifu","Gifu Prefecture","Gifu-ken","岐阜県","岐阜"],"__typename":"AddressZone"},{"code":"JP-22","name":"Shizuoka","nameWithAlternates":["Shizuoka","Shizuoka Prefecture","Shizuoka-ken","静岡県","静岡"],"__typename":"AddressZone"},{"code":"JP-23","name":"Aichi","nameWithAlternates":["Aichi","Aichi Prefecture","Aichi-ken","愛知県","愛知"],"__typename":"AddressZone"},{"code":"JP-24","name":"Mie","nameWithAlternates":["Mie","Mie Prefecture","Mie-ken","三重県","三重"],"__typename":"AddressZone"},{"code":"JP-25","name":"Shiga","nameWithAlternates":["Shiga","Shiga Prefecture","Shiga-ken","滋賀県","滋賀"],"__typename":"AddressZone"},{"code":"JP-26","name":"Kyoto","nameWithAlternates":["Kyōto","Kyoto","Kyoto Prefecture","Kyōto-fu","京都府","京都"],"__typename":"AddressZone"},{"code":"JP-27","name":"Osaka","nameWithAlternates":["Ōsaka","Osaka","Osaka Prefecture","Ōsaka-fu","大阪府","大阪"],"__typename":"AddressZone"},{"code":"JP-28","name":"Hyogo","nameWithAlternates":["Hyōgo","Hyogo","Hyogo Prefecture","Hyōgo-ken","兵庫県","兵庫"],"__typename":"AddressZone"},{"code":"JP-29","name":"Nara","nameWithAlternates":["Nara","Nara Prefecture","Nara-ken","奈良県","奈良"],"__typename":"AddressZone"},{"code":"JP-30","name":"Wakayama","nameWithAlternates":["Wakayama","Wakayama Prefecture","Wakayama-ken","和歌山県","和歌山"],"__typename":"AddressZone"},{"code":"JP-31","name":"Tottori","nameWithAlternates":["Tottori","Tottori Prefecture","Tottori-ken","鳥取県","鳥取"],"__typename":"AddressZone"},{"code":"JP-32","name":"Shimane","nameWithAlternates":["Shimane","Shimane Prefecture","Shimane-ken","島根県","島根"],"__typename":"AddressZone"},{"code":"JP-33","name":"Okayama","nameWithAlternates":["Okayama","Okayama Prefecture","Okayama-ken","岡山県","岡山"],"__typename":"AddressZone"},{"code":"JP-34","name":"Hiroshima","nameWithAlternates":["Hiroshima","Hiroshima Prefecture","Hiroshima-ken","広島県","広島"],"__typename":"AddressZone"},{"code":"JP-35","name":"Yamaguchi","nameWithAlternates":["Yamaguchi","Yamaguchi Prefecture","Yamaguchi-ken","山口県","山口"],"__typename":"AddressZone"},{"code":"JP-36","name":"Tokushima","nameWithAlternates":["Tokushima","Tokushima Prefecture","Tokushima-ken","徳島県","徳島"],"__typename":"AddressZone"},{"code":"JP-37","name":"Kagawa","nameWithAlternates":["Kagawa","Kagawa Prefecture","Kagawa-ken","香川県","香川"],"__typename":"AddressZone"},{"code":"JP-38","name":"Ehime","nameWithAlternates":["Ehime","Ehime Prefecture","Ehime-ken","愛媛県","愛媛"],"__typename":"AddressZone"},{"code":"JP-39","name":"Kochi","nameWithAlternates":["Kōchi","Kochi","Kochi Prefecture","Kōchi-ken","高知県","高知"],"__typename":"AddressZone"},{"code":"JP-40","name":"Fukuoka","nameWithAlternates":["Fukuoka","Fukuoka Prefecture","Fukuoka-ken","福岡県","福岡"],"__typename":"AddressZone"},{"code":"JP-41","name":"Saga","nameWithAlternates":["Saga","Saga Prefecture","Saga-ken","佐賀県","佐賀"],"__typename":"AddressZone"},{"code":"JP-42","name":"Nagasaki","nameWithAlternates":["Nagasaki","Nagasaki Prefecture","Nagasaki-ken","長崎県","長崎"],"__typename":"AddressZone"},{"code":"JP-43","name":"Kumamoto","nameWithAlternates":["Kumamoto","Kumamoto Prefecture","Kumamoto-ken","熊本県","熊本"],"__typename":"AddressZone"},{"code":"JP-44","name":"Oita","nameWithAlternates":["Ōita","Oita","Oita Prefecture","Ōita-ken","大分県","大分"],"__typename":"AddressZone"},{"code":"JP-45","name":"Miyazaki","nameWithAlternates":["Miyazaki","Miyazaki Prefecture","Miyazaki-ken","宮崎県","宮崎"],"__typename":"AddressZone"},{"code":"JP-46","name":"Kagoshima","nameWithAlternates":["Kagoshima","Kagoshima Prefecture","Kagoshima-ken","鹿児島県","鹿児島"],"__typename":"AddressZone"},{"code":"JP-47","name":"Okinawa","nameWithAlternates":["Okinawa","Okinawa Prefecture","Okinawa-ken","沖縄県","沖縄"],"__typename":"AddressZone"}],"formatting":{"edit":"{country}_{lastName}{firstName}_{company}_{zip}{province}_{city}_{address1}_{address2}_{phone}","show":"{country} 〒{zip}_{province} {city}_{address1}_{address2}_{company}_{lastName} {firstName}様_{phone}","__typename":"AddressFormat"},"autocompletionField":"POSTAL_CODE","buildingNumberRequired":true,"buildingNumberMayBeInAddress2":false,"pureNumericPostalCode":false,"postalCodeRequired":true,"__typename":"Country"},"popularBillingCountries":[{"value":"JP","label":"Japan","__typename":"Country"},{"value":"AU","label":"Australia","__typename":"Country"},{"value":"US","label":"United States","__typename":"Country"},{"value":"GB","label":"United Kingdom","__typename":"Country"}],"popularShippingCountries":[{"value":"JP","label":"Japan","__typename":"Country"},{"value":"AU","label":"Australia","__typename":"Country"},{"value":"US","label":"United States","__typename":"Country"},{"value":"GB","label":"United Kingdom","__typename":"Country"},{"value":"SG","label":"Singapore","__typename":"Country"}],"storefront":{"url":"https://shinkansen-ticket.com","hasStorefront":true,"__typename":"CheckoutStorefrontConfig"},"theme":{"id":"8618278943","cityhash":"6232052376928117812","__typename":"ThemeConfig"},"trackingPixels":[{"pixelId":"G-1YH72CRN7Q","pixelType":"GOOGLE_TAG_MANAGER","pixelConfig":{"target_country":"JP","gtag_events":[{"type":"begin_checkout","action_label":"G-1YH72CRN7Q"},{"type":"search","action_label":"G-1YH72CRN7Q"},{"type":"view_item","action_label":["G-1YH72CRN7Q","MC-DEP924NSLJ"]},{"type":"purchase","action_label":["G-1YH72CRN7Q","MC-DEP924NSLJ"]},{"type":"page_view","action_label":["G-1YH72CRN7Q","MC-DEP924NSLJ"]},{"type":"add_payment_info","action_label":"G-1YH72CRN7Q"},{"type":"add_to_cart","action_label":"G-1YH72CRN7Q"}]},"__typename":"TrackingPixel"},{"pixelId":"316946655442257","pixelType":"FACEBOOK","pixelConfig":null,"__typename":"TrackingPixel"}],"onlineStoreChat":null,"facebookAppPixelId":null,"facebookCapiEnabled":false,"myshopifyDomain":"shinkansen-ticket.myshopify.com","translations":"{\"thank_you\":{\"fulfillment\":{\"product_image_label\":\"Image\"},\"thank_you_title\":\"Your order is received\",\"thank_you_confirmed_order_with_email\":\"You&apos;ll receive an email with your order number shortly.\",\"thank_you_confirmed_order_with_phone\":\"You&apos;ll receive a text with your order number shortly.\",\"thank_you_confirmed_order_with_email_and_phone\":\"You&apos;ll receive an email and text with your order number shortly.\"},\"order_summary\":{\"product_image_label\":\"Image\"},\"stock\":{\"product_column_header\":\"Tickets\"},\"delivery_options\":{\"ship\":\"Ship to Hotel in Japan (Free) or Your home country address (2500 JPY~)\",\"pick_up\":\"Pick up at Postal office (Free)\",\"shipping_address\":\"Shipping address of the tickets\",\"pick_up_in_two_to_four_days\":\"Ready 3~4 days prior to train boarding date\",\"pick_up_in_one_hour\":\"Ready 3~4 days prior to train boarding date\",\"pick_up_in_two_hours\":\"Ready 3~4 days prior to train boarding date\",\"pick_up_in_four_hours\":\"Ready 3~4 days prior to train boarding date\",\"pick_up_in_twenty_four_hours\":\"Ready 3~4 days prior to train boarding date\",\"pick_up_in_five_or_more_days\":\"Ready 3~4 days prior to train boarding date\",\"pick_up_in_zero_to_two_hours\":\"Ready 3~4 days prior to train boarding date\",\"pick_up_in_two_to_four_hours\":\"Ready 3~4 days prior to train boarding date\",\"pick_up_immediately\":\"Ready 3~4 days prior to train boarding date\",\"pick_up_next_day\":\"Ready 3~4 days prior to train boarding date\",\"pick_up_locations\":\"Pickup location (Please make sure that you can pick-up during business hours)\"},\"contact\":{\"shipping_address_title\":\"Shipping address (hotel in Japan or your home country)\",\"optional_address2_label\":\"Hotel name \\u0026 Check-in date or Apartment, suite, etc.  (optional)\",\"address2_label\":\"Hotel name \\u0026 Check-in date or Apartment, suite, etc.\",\"civic_number_warning\":\"Add your hotel name below if you choose [Ship to Hotel in Japan]\",\"last_name_label\":\"Last name (Reservation name)\",\"delivery_option_title\":\"Delivery method ([Ship to Hotel in Japan] is recommended)\"}}","analyticsAccount":"UA-75483052-1","enhancedEcommerceEnabled":true,"customerAccountRequirement":"OPTIONAL","emailMarketing":"OFF","smsMarketing":"OFF","shippingRatesReloadStrategy":{"JP":3,"BD":3,"BT":3,"BN":3,"KH":3,"CN":{"AH":3,"BJ":3,"CQ":3,"FJ":3,"GS":3,"GD":3,"GX":3,"GZ":3,"HI":3,"HE":3,"HL":3,"HA":3,"HB":3,"HN":3,"NM":3,"JS":3,"JX":3,"JL":3,"LN":3,"NX":3,"QH":3,"SN":3,"SD":3,"SH":3,"SX":3,"SC":3,"TJ":3,"XJ":3,"YZ":3,"YN":3,"ZJ":3},"IN":{"AN":3,"AP":3,"AR":3,"AS":3,"BR":3,"CH":3,"CG":3,"DN":3,"DD":3,"DL":3,"GA":3,"GJ":3,"HR":3,"HP":3,"JK":3,"JH":3,"KA":3,"KL":3,"LA":3,"LD":3,"MP":3,"MH":3,"MN":3,"ML":3,"MZ":3,"NL":3,"OR":3,"PY":3,"PB":3,"RJ":3,"SK":3,"TN":3,"TS":3,"TR":3,"UP":3,"UK":3,"WB":3},"ID":{"AC":3,"BA":3,"BB":3,"BT":3,"BE":3,"GO":3,"JK":3,"JA":3,"JB":3,"JT":3,"JI":3,"KB":3,"KS":3,"KT":3,"KI":3,"KU":3,"KR":3,"LA":3,"MA":3,"MU":3,"NB":3,"NT":3,"PA":3,"PB":3,"RI":3,"SR":3,"SN":3,"ST":3,"SG":3,"SA":3,"SB":3,"SS":3,"SU":3,"YO":3},"LA":3,"MY":{"JHR":3,"KDH":3,"KTN":3,"KUL":3,"LBN":3,"MLK":3,"NSN":3,"PHG":3,"PRK":3,"PLS":3,"PNG":3,"PJY":3,"SBH":3,"SWK":3,"SGR":3,"TRG":3},"MV":3,"MN":3,"MM":3,"NP":3,"PK":3,"PH":{"PH-ABR":3,"PH-AGN":3,"PH-AGS":3,"PH-AKL":3,"PH-ALB":3,"PH-ANT":3,"PH-APA":3,"PH-AUR":3,"PH-BAS":3,"PH-BAN":3,"PH-BTN":3,"PH-BTG":3,"PH-BEN":3,"PH-BIL":3,"PH-BOH":3,"PH-BUK":3,"PH-BUL":3,"PH-CAG":3,"PH-CAN":3,"PH-CAS":3,"PH-CAM":3,"PH-CAP":3,"PH-CAT":3,"PH-CAV":3,"PH-CEB":3,"PH-NCO":3,"PH-COM":3,"PH-DAV":3,"PH-DAS":3,"PH-DVO":3,"PH-DAO":3,"PH-DIN":3,"PH-EAS":3,"PH-GUI":3,"PH-IFU":3,"PH-ILN":3,"PH-ILS":3,"PH-ILI":3,"PH-ISA":3,"PH-KAL":3,"PH-LUN":3,"PH-LAG":3,"PH-LAN":3,"PH-LAS":3,"PH-LEY":3,"PH-MAG":3,"PH-MAD":3,"PH-MAS":3,"PH-00":3,"PH-MSC":3,"PH-MSR":3,"PH-MOU":3,"PH-NEC":3,"PH-NER":3,"PH-NSA":3,"PH-NUE":3,"PH-NUV":3,"PH-MDC":3,"PH-MDR":3,"PH-PLW":3,"PH-PAM":3,"PH-PAN":3,"PH-QUE":3,"PH-QUI":3,"PH-RIZ":3,"PH-ROM":3,"PH-WSA":3,"PH-SAR":3,"PH-SIG":3,"PH-SOR":3,"PH-SCO":3,"PH-SLE":3,"PH-SUK":3,"PH-SLU":3,"PH-SUN":3,"PH-SUR":3,"PH-TAR":3,"PH-TAW":3,"PH-ZMB":3,"PH-ZAN":3,"PH-ZAS":3,"PH-ZSI":3},"SG":3,"KR":{"KR-26":3,"KR-43":3,"KR-44":3,"KR-27":3,"KR-30":3,"KR-42":3,"KR-29":3,"KR-47":3,"KR-41":3,"KR-48":3,"KR-28":3,"KR-49":3,"KR-45":3,"KR-46":3,"KR-50":3,"KR-11":3,"KR-31":3},"LK":3,"TH":{"TH-37":3,"TH-15":3,"TH-10":3,"TH-38":3,"TH-31":3,"TH-24":3,"TH-18":3,"TH-36":3,"TH-22":3,"TH-50":3,"TH-57":3,"TH-20":3,"TH-86":3,"TH-46":3,"TH-62":3,"TH-71":3,"TH-40":3,"TH-81":3,"TH-52":3,"TH-51":3,"TH-42":3,"TH-16":3,"TH-58":3,"TH-44":3,"TH-49":3,"TH-26":3,"TH-73":3,"TH-48":3,"TH-30":3,"TH-60":3,"TH-80":3,"TH-55":3,"TH-96":3,"TH-39":3,"TH-43":3,"TH-12":3,"TH-13":3,"TH-94":3,"TH-S":3,"TH-82":3,"TH-93":3,"TH-56":3,"TH-67":3,"TH-76":3,"TH-66":3,"TH-65":3,"TH-14":3,"TH-54":3,"TH-83":3,"TH-25":3,"TH-77":3,"TH-85":3,"TH-70":3,"TH-21":3,"TH-45":3,"TH-27":3,"TH-47":3,"TH-11":3,"TH-74":3,"TH-75":3,"TH-19":3,"TH-91":3,"TH-17":3,"TH-33":3,"TH-90":3,"TH-64":3,"TH-72":3,"TH-84":3,"TH-32":3,"TH-63":3,"TH-92":3,"TH-23":3,"TH-34":3,"TH-41":3,"TH-61":3,"TH-53":3,"TH-95":3,"TH-35":3},"TL":3,"VN":3,"TW":3,"MO":3,"HK":{"HK":3,"KL":3,"NT":3},"AL":3,"AD":3,"AM":3,"AT":3,"AZ":3,"BY":3,"BE":3,"BA":3,"BG":3,"HR":3,"CY":3,"CZ":3,"DK":3,"EE":3,"FI":3,"FR":3,"GE":3,"DE":3,"GR":3,"VA":3,"HU":3,"IS":3,"IE":{"CW":3,"CN":3,"CE":3,"CO":3,"DL":3,"D":3,"G":3,"KY":3,"KE":3,"KK":3,"LS":3,"LM":3,"LK":3,"LD":3,"LH":3,"MO":3,"MH":3,"MN":3,"OY":3,"RN":3,"SO":3,"TA":3,"WD":3,"WH":3,"WX":3,"WW":3},"IT":{"AG":3,"AL":3,"AN":3,"AO":3,"AR":3,"AP":3,"AT":3,"AV":3,"BA":3,"BT":3,"BL":3,"BN":3,"BG":3,"BI":3,"BO":3,"BZ":3,"BS":3,"BR":3,"CA":3,"CL":3,"CB":3,"CI":3,"CE":3,"CT":3,"CZ":3,"CH":3,"CO":3,"CS":3,"CR":3,"KR":3,"CN":3,"EN":3,"FM":3,"FE":3,"FI":3,"FG":3,"FC":3,"FR":3,"GE":3,"GO":3,"GR":3,"IM":3,"IS":3,"AQ":3,"SP":3,"LT":3,"LE":3,"LC":3,"LI":3,"LO":3,"LU":3,"MC":3,"MN":3,"MS":3,"MT":3,"VS":3,"ME":3,"MI":3,"MO":3,"MB":3,"NA":3,"NO":3,"NU":3,"OG":3,"OT":3,"OR":3,"PD":3,"PA":3,"PR":3,"PV":3,"PG":3,"PU":3,"PE":3,"PC":3,"PI":3,"PT":3,"PN":3,"PZ":3,"PO":3,"RG":3,"RA":3,"RC":3,"RE":3,"RI":3,"RN":3,"RM":3,"RO":3,"SA":3,"SS":3,"SV":3,"SI":3,"SR":3,"SO":3,"TA":3,"TE":3,"TR":3,"TO":3,"TP":3,"TN":3,"TV":3,"TS":3,"UD":3,"VA":3,"VE":3,"VB":3,"VC":3,"VR":3,"VV":3,"VI":3,"VT":3},"KZ":3,"XK":3,"KG":3,"LV":3,"LI":3,"LT":3,"LU":3,"MT":3,"MD":3,"MC":3,"ME":3,"NL":3,"MK":3,"NO":3,"PL":3,"PT":{"PT-20":3,"PT-01":3,"PT-02":3,"PT-03":3,"PT-04":3,"PT-05":3,"PT-06":3,"PT-07":3,"PT-08":3,"PT-09":3,"PT-10":3,"PT-11":3,"PT-30":3,"PT-12":3,"PT-13":3,"PT-14":3,"PT-15":3,"PT-16":3,"PT-17":3,"PT-18":3},"RO":{"AB":3,"AR":3,"AG":3,"BC":3,"BH":3,"BN":3,"BT":3,"BR":3,"BV":3,"B":3,"BZ":3,"CL":3,"CS":3,"CJ":3,"CT":3,"CV":3,"DB":3,"DJ":3,"GL":3,"GR":3,"GJ":3,"HR":3,"HD":3,"IL":3,"IS":3,"IF":3,"MM":3,"MH":3,"MS":3,"NT":3,"OT":3,"PH":3,"SJ":3,"SM":3,"SB":3,"SV":3,"TR":3,"TM":3,"TL":3,"VL":3,"VS":3,"VN":3},"RU":{"ALT":3,"AL":3,"AMU":3,"ARK":3,"AST":3,"BEL":3,"BRY":3,"CE":3,"CHE":3,"CHU":3,"CU":3,"IRK":3,"IVA":3,"YEV":3,"KB":3,"KGD":3,"KLU":3,"KAM":3,"KC":3,"KEM":3,"KHA":3,"KHM":3,"KIR":3,"KO":3,"KOS":3,"KDA":3,"KYA":3,"KGN":3,"KRS":3,"LEN":3,"LIP":3,"MAG":3,"ME":3,"MOW":3,"MOS":3,"MUR":3,"NIZ":3,"NGR":3,"NVS":3,"OMS":3,"ORE":3,"ORL":3,"PNZ":3,"PER":3,"PRI":3,"PSK":3,"AD":3,"BA":3,"BU":3,"DA":3,"IN":3,"KL":3,"KR":3,"KK":3,"MO":3,"SE":3,"TA":3,"ROS":3,"RYA":3,"SPE":3,"SA":3,"SAK":3,"SAM":3,"SAR":3,"SMO":3,"STA":3,"SVE":3,"TAM":3,"TOM":3,"TUL":3,"TVE":3,"TYU":3,"TY":3,"UD":3,"ULY":3,"VLA":3,"VGG":3,"VLG":3,"VOR":3,"YAN":3,"YAR":3,"ZAB":3},"SM":3,"RS":3,"SK":3,"SI":3,"ES":{"C":3,"VI":3,"AB":3,"A":3,"AL":3,"O":3,"AV":3,"BA":3,"PM":3,"B":3,"BU":3,"CC":3,"CA":3,"S":3,"CS":3,"CE":3,"CR":3,"CO":3,"CU":3,"GI":3,"GR":3,"GU":3,"SS":3,"H":3,"HU":3,"J":3,"LO":3,"GC":3,"LE":3,"L":3,"LU":3,"M":3,"MA":3,"ML":3,"MU":3,"NA":3,"OR":3,"P":3,"PO":3,"SA":3,"TF":3,"SG":3,"SE":3,"SO":3,"T":3,"TE":3,"TO":3,"V":3,"VA":3,"BI":3,"ZA":3,"Z":3},"SE":3,"CH":3,"TJ":3,"TM":3,"UA":3,"GB":{"BFP":3,"ENG":3,"NIR":3,"SCT":3,"WLS":3},"UZ":3,"CA":{"AB":3,"BC":3,"MB":3,"NB":3,"NL":3,"NT":3,"NS":3,"NU":3,"ON":3,"PE":3,"QC":3,"SK":3,"YT":3},"US":{"AL":3,"AK":3,"AS":3,"AZ":3,"AR":3,"AA":3,"AE":3,"AP":3,"CA":3,"CO":3,"CT":3,"DE":3,"DC":3,"FM":3,"FL":3,"GA":3,"GU":3,"HI":3,"ID":3,"IL":3,"IN":3,"IA":3,"KS":3,"KY":3,"LA":3,"ME":3,"MH":3,"MD":3,"MA":3,"MI":3,"MN":3,"MS":3,"MO":3,"MT":3,"NE":3,"NV":3,"NH":3,"NJ":3,"NM":3,"NY":3,"NC":3,"ND":3,"MP":3,"OH":3,"OK":3,"OR":3,"PW":3,"PA":3,"PR":3,"RI":3,"SC":3,"SD":3,"TN":3,"TX":3,"UT":3,"VT":3,"VI":3,"VA":3,"WA":3,"WV":3,"WI":3,"WY":3},"AG":3,"AR":{"B":3,"K":3,"H":3,"U":3,"C":3,"X":3,"W":3,"E":3,"P":3,"Y":3,"L":3,"F":3,"M":3,"N":3,"Q":3,"R":3,"A":3,"J":3,"D":3,"Z":3,"S":3,"G":3,"V":3,"T":3},"BS":3,"BB":3,"BZ":3,"BO":3,"BR":{"AC":3,"AL":3,"AP":3,"AM":3,"BA":3,"CE":3,"DF":3,"ES":3,"GO":3,"MA":3,"MT":3,"MS":3,"MG":3,"PA":3,"PB":3,"PR":3,"PE":3,"PI":3,"RJ":3,"RN":3,"RS":3,"RO":3,"RR":3,"SC":3,"SP":3,"SE":3,"TO":3},"CL":{"AN":3,"AR":3,"AP":3,"AT":3,"AI":3,"BI":3,"CO":3,"LL":3,"LR":3,"MA":3,"ML":3,"NB":3,"LI":3,"RM":3,"TA":3,"VS":3},"CO":{"AMA":3,"ANT":3,"ARA":3,"ATL":3,"DC":3,"BOL":3,"BOY":3,"CAL":3,"CAQ":3,"CAS":3,"CAU":3,"CES":3,"CHO":3,"COR":3,"CUN":3,"GUA":3,"GUV":3,"HUI":3,"LAG":3,"MAG":3,"MET":3,"NAR":3,"NSA":3,"PUT":3,"QUI":3,"RIS":3,"SAP":3,"SAN":3,"SUC":3,"TOL":3,"VAC":3,"VAU":3,"VID":3},"CR":{"CR-A":3,"CR-C":3,"CR-G":3,"CR-H":3,"CR-L":3,"CR-P":3,"CR-SJ":3},"DM":3,"DO":3,"EC":3,"SV":{"SV-AH":3,"SV-CA":3,"SV-CH":3,"SV-CU":3,"SV-LI":3,"SV-PA":3,"SV-UN":3,"SV-MO":3,"SV-SM":3,"SV-SS":3,"SV-SV":3,"SV-SA":3,"SV-SO":3,"SV-US":3},"GD":3,"GT":{"AVE":3,"BVE":3,"CMT":3,"CQM":3,"EPR":3,"ESC":3,"GUA":3,"HUE":3,"IZA":3,"JAL":3,"JUT":3,"PET":3,"QUE":3,"QUI":3,"RET":3,"SAC":3,"SMA":3,"SRO":3,"SOL":3,"SUC":3,"TOT":3,"ZAC":3},"GY":3,"HT":3,"HN":3,"JM":3,"MX":{"AGS":3,"BC":3,"BCS":3,"CAMP":3,"CHIS":3,"CHIH":3,"DF":3,"COAH":3,"COL":3,"DGO":3,"GTO":3,"GRO":3,"HGO":3,"JAL":3,"MEX":3,"MICH":3,"MOR":3,"NAY":3,"NL":3,"OAx":3,"OAX":3,"PUE":3,"QRO":3,"Q ROO":3,"SLP":3,"SIN":3,"SON":3,"TAB":3,"TAMPS":3,"TLAX":3,"VER":3,"YUC":3,"ZAC":3},"NI":3,"PA":{"PA-1":3,"PA-4":3,"PA-2":3,"PA-3":3,"PA-5":3,"PA-EM":3,"PA-6":3,"PA-KY":3,"PA-7":3,"PA-NB":3,"PA-8":3,"PA-10":3,"PA-9":3},"PY":3,"PE":{"PE-AMA":3,"PE-ANC":3,"PE-APU":3,"PE-ARE":3,"PE-AYA":3,"PE-CAJ":3,"PE-CAL":3,"PE-CUS":3,"PE-HUV":3,"PE-HUC":3,"PE-ICA":3,"PE-JUN":3,"PE-LAL":3,"PE-LAM":3,"PE-LIM":3,"PE-LMA":3,"PE-LOR":3,"PE-MDD":3,"PE-MOQ":3,"PE-PAS":3,"PE-PIU":3,"PE-PUN":3,"PE-SAM":3,"PE-TAC":3,"PE-TUM":3,"PE-UCA":3},"KN":3,"LC":3,"VC":3,"SR":3,"TT":3,"UY":{"UY-AR":3,"UY-CA":3,"UY-CL":3,"UY-CO":3,"UY-DU":3,"UY-FS":3,"UY-FD":3,"UY-LA":3,"UY-MA":3,"UY-MO":3,"UY-PA":3,"UY-RN":3,"UY-RV":3,"UY-RO":3,"UY-SA":3,"UY-SJ":3,"UY-SO":3,"UY-TA":3,"UY-TT":3},"VE":{"VE-Z":3,"VE-B":3,"VE-C":3,"VE-D":3,"VE-E":3,"VE-F":3,"VE-G":3,"VE-H":3,"VE-Y":3,"VE-W":3,"VE-A":3,"VE-I":3,"VE-J":3,"VE-X":3,"VE-K":3,"VE-L":3,"VE-M":3,"VE-N":3,"VE-O":3,"VE-P":3,"VE-R":3,"VE-S":3,"VE-T":3,"VE-U":3,"VE-V":3},"AU":{"ACT":3,"NSW":3,"NT":3,"QLD":3,"SA":3,"TAS":3,"VIC":3,"WA":3},"CK":3,"FJ":3,"KI":3,"NR":3,"NZ":{"AUK":3,"BOP":3,"CAN":3,"CIT":3,"GIS":3,"HKB":3,"MWT":3,"MBH":3,"NSN":3,"NTL":3,"OTA":3,"STL":3,"TKI":3,"TAS":3,"WKO":3,"WGN":3,"WTC":3},"NU":3,"PG":3,"WS":3,"SB":3,"TO":3,"TV":3,"VU":3,"AF":3,"BH":3,"IQ":3,"IL":3,"JO":3,"KW":{"KW-AH":3,"KW-KU":3,"KW-FA":3,"KW-JA":3,"KW-HA":3,"KW-MU":3},"LB":3,"OM":3,"QA":3,"SA":3,"TR":3,"AE":{"AZ":3,"AJ":3,"DU":3,"FU":3,"RK":3,"SH":3,"UQ":3},"YE":3,"AX":3,"DZ":3,"AO":3,"AI":3,"AW":3,"AC":3,"BJ":3,"BM":3,"BW":3,"IO":3,"BF":3,"BI":3,"CV":3,"BQ":3,"KY":3,"CF":3,"TD":3,"CX":3,"CC":3,"KM":3,"CG":3,"CD":3,"CI":3,"CW":3,"DJ":3,"EG":{"SU":3,"SHR":3,"ALX":3,"ASN":3,"AST":3,"BH":3,"BNS":3,"C":3,"DK":3,"DT":3,"FYM":3,"GH":3,"GZ":3,"HU":3,"IS":3,"KFS":3,"LX":3,"MT":3,"MN":3,"MNF":3,"WAD":3,"SIN":3,"PTS":3,"KB":3,"KN":3,"BA":3,"SHG":3,"JS":3,"SUZ":3},"GQ":3,"ER":3,"SZ":3,"ET":3,"FK":3,"FO":3,"GF":3,"PF":3,"TF":3,"GA":3,"GM":3,"GH":3,"GI":3,"GL":3,"GP":3,"GG":3,"GN":3,"GW":3,"IM":3,"JE":3,"KE":3,"LS":3,"LR":3,"LY":3,"MG":3,"MW":3,"ML":3,"MQ":3,"MR":3,"MU":3,"YT":3,"MS":3,"MA":3,"MZ":3,"NA":3,"NE":3,"NG":{"AB":3,"FC":3,"AD":3,"AK":3,"AN":3,"BA":3,"BY":3,"BE":3,"BO":3,"CR":3,"DE":3,"EB":3,"ED":3,"EK":3,"EN":3,"GO":3,"IM":3,"JI":3,"KD":3,"KN":3,"KT":3,"KE":3,"KO":3,"KW":3,"LA":3,"NA":3,"NI":3,"OG":3,"ON":3,"OS":3,"OY":3,"PL":3,"RI":3,"SO":3,"TA":3,"YO":3,"ZA":3},"NF":3,"PS":3,"PN":3,"CM":3,"RE":3,"RW":3,"BL":3,"SH":3,"MF":3,"PM":3,"ST":3,"SN":3,"SC":3,"SL":3,"SX":3,"SO":3,"ZA":{"EC":3,"FS":3,"GP":3,"NL":3,"LP":3,"MP":3,"NW":3,"NC":3,"WC":3},"GS":3,"SS":3,"SD":3,"SJ":3,"TZ":3,"TG":3,"TK":3,"TA":3,"TN":3,"TC":3,"UG":3,"UM":3,"VG":3,"WF":3,"EH":3,"ZM":3,"ZW":3,"NC":3},"billingAddressFormSettings":{"address2":{"mode":"OPTIONAL","__typename":"AddressFormField"},"company":{"mode":"OPTIONAL","__typename":"AddressFormField"},"firstName":{"mode":"REQUIRED","__typename":"AddressFormField"},"phone":{"mode":"OPTIONAL","__typename":"AddressFormField"},"addressAutocompletion":true,"__typename":"BillingAddressFormSettings"},"shopConfigurations":{"defaultConfiguration":{"contactInfoOptions":["EMAIL"],"addressFormSettings":{"address2":{"mode":"OPTIONAL","__typename":"AddressFormField"},"company":{"mode":"OPTIONAL","__typename":"AddressFormField"},"firstName":{"mode":"REQUIRED","__typename":"AddressFormField"},"phone":{"mode":"REQUIRED","__typename":"AddressFormField"},"addressAutocompletion":true,"addressValidation":true,"__typename":"AddressFormSettings"},"__typename":"CountryConfiguration"},"countrySpecificConfigurations":[{"countries":["AF","AX","AL","DZ","AD","AO","AI","AG","AR","AM","AW","AC","AU","AT","AZ","BS","BH","BD","BB","BY","BE","BZ","BJ","BM","BT","BO","BA","BW","BR","IO","VG","BN","BG","BF","BI","KH","CM","CA","CV","BQ","KY","CF","TD","CL","CN","CX","CC","CO","KM","CG","CD","CK","CR","HR","CW","CY","CZ","CI","DK","DJ","DM","DO","EC","EG","SV","GQ","ER","EE","SZ","ET","FK","FO","FJ","FI","FR","GF","PF","TF","GA","GM","GE","DE","GH","GI","GR","GL","GD","GP","GT","GG","GN","GW","GY","HT","HN","HK","HU","IS","IN","ID","IQ","IE","IM","IL","IT","JM","JP","JE","JO","KZ","KE","KI","XK","KW","KG","LA","LV","LB","LS","LR","LY","LI","LT","LU","MO","MG","MW","MY","MV","ML","MT","MQ","MR","MU","YT","MX","MD","MC","MN","ME","MS","MA","MZ","MM","NA","NR","NP","NL","NC","NZ","NI","NE","NG","NU","NF","MK","NO","OM","PK","PS","PA","PG","PY","PE","PH","PN","PL","PT","QA","RE","RO","RU","RW","WS","SM","ST","SA","SN","RS","SC","SL","SG","SX","SK","SI","SB","SO","ZA","GS","KR","SS","ES","LK","BL","SH","KN","LC","MF","PM","VC","SD","SR","SJ","SE","CH","TW","TJ","TZ","TH","TL","TG","TK","TO","TT","TA","TN","TR","TM","TC","TV","UM","UG","UA","AE","GB","US","UY","UZ","VU","VA","VE","VN","WF","EH","YE","ZM","ZW"],"configuration":{"contactInfoOptions":["EMAIL"],"addressFormSettings":{"address2":{"mode":"OPTIONAL","__typename":"AddressFormField"},"company":{"mode":"OPTIONAL","__typename":"AddressFormField"},"firstName":{"mode":"REQUIRED","__typename":"AddressFormField"},"phone":{"mode":"REQUIRED","__typename":"AddressFormField"},"addressAutocompletion":true,"__typename":"AddressFormSettings"},"__typename":"CountryConfiguration"},"__typename":"CountrySpecificConfiguration"}],"__typename":"ShopConfigurations"},"currencyCode":"JPY","timeZone":"Asia/Tokyo","checkoutChannelConfiguration":null,"b2bEnabled":false,"enabledFlags":["03161c54","63f2af56","60a1a494","34f4342a","eabd8dc4","c018467d","f4faa4cc","2814c447","94a1c179","3c091ff7","1cf4974e","1f952d6e","1955e64a","f6570685"],"enabledDeliveryMethods":["SHIPPING","PICK_UP"],"giftCardsEnabled":false,"discountCodesEnabled":false,"contactEmail":"info@shinkansen-ticket.com","acceptTipPayments":false,"showTipPayments":true,"postPurchaseExtensionAvailable":false,"postPurchaseDevelopmentModeAvailable":false,"postPurchaseAdditionalTrackingScript":null,"confirmationPageEnabled":false,"additionalTrackingScript":null,"hasAdditionalGoogleAnalyticsScript":false,"customerAccountLocationsUrl":"https://shopify.com/12176360/account/locations","loginLinkVisible":true,"customerSettingsEnabled":true,"shopPayEnabled":false,"storeVaultEnabled":false,"webPixelConfigurations":[{"idTmp":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0574","type":"APP","apiClientId":"shopify-pixel","purposes":null,"__typename":"WebPixelConfiguration"},{"idTmp":"shopify-custom-pixel","configuration":null,"eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0574","type":"CUSTOM","apiClientId":"shopify-pixel","purposes":null,"__typename":"WebPixelConfiguration"}],"webPixelManagerVersion":"cc636c01w77d84d94p0e8bf2ddmd75d25ae","linkToArriveApp":true,"sameBillingAndShippingAddress":false,"requireMatchingShippingAndBilling":false,"prefetchShippingRatesEnabled":true,"captureAtFulfillmentEnabled":false,"developmentShop":false,"customerAccountDomain":"shopify.com","checkoutPublicAccessToken":"ODNlZDQyZjZkMDRkYjA4NGEzNzQ3ZmE1MDg2ZGI2NjM6\n","asyncDeliveryPromiseExperienceEnabled":false,"__typename":"CheckoutShopConfig"},"checkoutProfile":null,"globalCheckoutUiExtensions":[],"cardsinkUrl":"https://deposit.us.shopifycs.com/sessions"},"d7cbb2e251147912fcb3a54465ba574d531e661429e5016b8f6827d9ffd45ed0{}":{"shop":{"defaultShippingDetails":{"country":{"code":"UZ","__typename":"Country"},"zone":null,"__typename":"DefaultShippingDetails"},"__typename":"CheckoutShopConfig"},"httpRequestInfo":{"locale":"en-UZ","localeDirection":"ltr","geolocation":{"country":{"code":"UZ","name":"Uzbekistan","localizationKeys":{"address2":null,"postalCode":null,"zone":"region_label","__typename":"AddressLocalizationKeys"},"labels":{"firstName":"First name","lastName":"Last name","company":"Company","address1":"Address","address2":"Apartment, suite, etc.","city":"City","country":"Country/region","zone":"Region","postalCode":"Postal code","phone":"Phone","__typename":"AddressLabels"},"zones":[],"formatting":{"edit":"{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}","show":"{firstName} {lastName}_{company}_{address1}_{address2}_{city}_{zip}_{country}_{phone}","__typename":"AddressFormat"},"autocompletionField":"ADDRESS1","buildingNumberRequired":false,"buildingNumberMayBeInAddress2":false,"pureNumericPostalCode":true,"postalCodeRequired":false,"__typename":"Country"},"zone":null,"coordinates":{"latitude":41.2615,"longitude":69.2177,"__typename":"GeographicalCoordinates"},"__typename":"Geolocation"},"__typename":"HttpRequestInfo"},"mobileCheckoutSdkConfig":{"checkoutAuthenticationResult":null,"checkoutSdkTheme":"LIGHT","version":null,"schema":null,"variant":null,"__typename":"MobileCheckoutSdkConfig"}},"98b7a05f874c8d16eb09a509ceffc927d4b045afeca0a76c0f7fc97fdf910c09{\"checkpointData\":null,\"queueToken\":\"AvX2E1uGlL_suIgK7XR0H5Kf3aHX8u3fRSUYNDrHjJFv5U4HR4b2ND_optP_RbjMsWDOKEzrd4XAy1UPk1wpfZfJlKBTl0FFYMEn69OjdVtduFPug2f9RVSxEX9PMa7Bo3H-ZsQx2yJb5mi0TFFpC_lPVf_9fP5k3umOHACdg_9hpdTjOmoS\"}":{"session":{"context":{"session":[],"policies":{"fees":[],"payment":[],"buyerIdentity":[],"tax":[],"discount":[],"merchandise":[],"tip":[],"delivery":[],"__typename":"PolicyFactSet"},"__typename":"NegotiationContext"},"sessionType":"CART_API","sourceId":"c1-504a028a54ba6687cbfa89265899de7a","sourceVersion":null,"checkoutSessionIdentifier":"7a9a17c7c6022e8753a517f1f10596f6","storefrontAnalyticsStartedOrderEventId":null,"cartReturnUrl":"https://shinkansen-ticket.com/cart","headerLogoUrl":"https://shinkansen-ticket.com","previewScript":null,"negotiate":{"result":{"queueToken":"AuF6hWAVwYLlNpEu9ArIMtq7_yst0ugfKN2hwNCfUkBiQVT0eIOfIk52gDnuLsNvLxfP58xqyEqVSbK5sk4YiagX2LKOHaLFfUTE0ZYa2cjJmdawKV1XpOqAyBUNJqHAlhG6PZlu8hejq2-oJuuks860zLuiz9T26oPS56TSDArFYAx_yWmD","buyerProposal":{"merchandiseDiscount":{"__typename":"FilledDiscountTerms","acceptUnexpectedDiscounts":true,"lines":[]},"deliveryDiscount":{"__typename":"FilledDiscountTerms","acceptUnexpectedDiscounts":true,"lines":[]},"delivery":{"__typename":"FilledDeliveryTerms","intermediateRates":false,"progressiveRatesEstimatedTimeUntilCompletion":0,"shippingRatesStatusToken":"","deliveryLines":[{"destinationAddress":{"__typename":"InvalidDeliveryAddress"},"targetMerchandise":{"linesV2":[{"stableId":"eeb26fb8-dc56-40a0-aa7c-6fdb83e79d2f","merchandise":{"__typename":"ProductVariantMerchandise","id":"gid://shopify/ProductVariantMerchandise/25853251649","digest":"73d786676192f977a04b8c9ab812987c","variantId":"gid://shopify/ProductVariant/25853251649","title":"Shinkansen Ticket Online Booking : Shin-Osaka to Nagoya","subtitle":"Reserved / Adult (12 years old~) / Normal","requiresShipping":true,"properties":[{"name":"Date","value":{"string":"2024/February/20","__typename":"MerchandisePropertyValueString"},"visible":true,"__typename":"MerchandiseProperty"},{"name":"Time (hour)","value":{"string":"6","__typename":"MerchandisePropertyValueString"},"visible":true,"__typename":"MerchandiseProperty"}]},"totalAmount":{"value":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"__typename":"MerchandiseLine"}],"__typename":"FilledMerchandiseLineTargetCollection"},"groupType":"ONE_TIME_PURCHASE","selectedDeliveryStrategy":{"handle":"7a9a17c7c6022e8753a517f1f10596f6-ce844cb2655887232fe5cc13006aa0e0","__typename":"DeliveryStrategyReference"},"availableDeliveryStrategies":[],"__typename":"DeliveryLine"}]},"merchandise":{"taxesIncluded":true,"merchandiseLines":[{"stableId":"eeb26fb8-dc56-40a0-aa7c-6fdb83e79d2f","merchandise":{"__typename":"ProductVariantMerchandise","id":"gid://shopify/ProductVariantMerchandise/25853251649","digest":"73d786676192f977a04b8c9ab812987c","variantId":"gid://shopify/ProductVariant/25853251649","title":"Shinkansen Ticket Online Booking : Shin-Osaka to Nagoya","untranslatedTitle":"Shinkansen Ticket Online Booking : Shin-Osaka to Nagoya","subtitle":"Reserved / Adult (12 years old~) / Normal","untranslatedSubtitle":"Reserved / Adult (12 years old~) / Normal","product":{"id":"gid://shopify/Product/7918749825","vendor":"Tokaido","productType":"Shinkansen ticket","__typename":"Product"},"productUrl":"/products/shinkansenticket-shinosaka-nagoya","image":{"altText":"Shinkansen ticket: From Shin-Osaka to Nagoya","one":"https://cdn.shopify.com/s/files/1/1217/6360/products/nagoya_castle_001_87d2602f-098a-49a9-bd09-0ee4f2814850_64x64.jpg?v=1473742556","two":"https://cdn.shopify.com/s/files/1/1217/6360/products/nagoya_castle_001_87d2602f-098a-49a9-bd09-0ee4f2814850_128x128.jpg?v=1473742556","four":"https://cdn.shopify.com/s/files/1/1217/6360/products/nagoya_castle_001_87d2602f-098a-49a9-bd09-0ee4f2814850_256x256.jpg?v=1473742556","__typename":"Image"},"properties":[{"name":"Date","value":{"string":"2024/February/20","__typename":"MerchandisePropertyValueString"},"visible":true,"__typename":"MerchandiseProperty"},{"name":"Time (hour)","value":{"string":"6","__typename":"MerchandisePropertyValueString"},"visible":true,"__typename":"MerchandiseProperty"}],"requiresShipping":true,"options":[{"name":"Seat","value":"Reserved","__typename":"ProductVariantOption"},{"name":"Adult/Child","value":"Adult (12 years old~)","__typename":"ProductVariantOption"},{"name":"Extend","value":"Normal","__typename":"ProductVariantOption"}],"sellingPlan":null,"giftCard":false},"quantity":{"items":{"value":1,"__typename":"IntValueConstraint"},"__typename":"ProposalMerchandiseQuantityByItem"},"totalAmount":{"value":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"recurringTotal":null,"lineAllocations":[{"stableId":"579a3c898fc3edf991250b3419c3687c","quantity":1,"totalAmountBeforeReductions":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"totalAmountAfterDiscounts":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"totalAmountAfterLineDiscounts":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"checkoutPriceAfterDiscounts":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"checkoutPriceAfterLineDiscounts":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"checkoutPriceBeforeReductions":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"unitPrice":null,"allocations":[],"__typename":"LineAllocation"}],"lineComponentsSource":null,"lineComponents":[],"__typename":"MerchandiseLine"}],"__typename":"FilledMerchandiseTerms"},"runningTotal":{"value":{"amount":"13470.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"total":{"__typename":"AnyConstraint"},"checkoutTotalBeforeTaxesAndShipping":null,"checkoutTotalTaxes":null,"checkoutTotal":{"__typename":"AnyConstraint"},"deferredTotal":null,"hasOnlyDeferredShipping":false,"subtotalBeforeTaxesAndShipping":{"value":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"attribution":{"attributions":[],"__typename":"Attribution"},"saleAttributions":{"attributions":[],"__typename":"SaleAttributions"},"__typename":"Proposal"},"sellerProposal":{"merchandiseDiscount":{"__typename":"FilledDiscountTerms","acceptUnexpectedDiscounts":true,"lines":[]},"deliveryDiscount":{"__typename":"FilledDiscountTerms","acceptUnexpectedDiscounts":true,"lines":[]},"deliveryExpectations":{"__typename":"UnavailableTerms"},"availableRedeemables":{"availableRedeemables":[],"__typename":"AvailableRedeemables"},"delivery":{"__typename":"UnavailableTerms"},"payment":{"availablePayments":[{"paymentMethod":{"__typename":"AnyDirectPaymentMethod","availablePaymentProviders":[{"paymentMethodIdentifier":"a162d175d33e07f3d572b9ebc772d3f1","name":"stripe","brands":["VISA","MASTERCARD","AMEX","JCB","DINERS_CLUB","DISCOVER"],"orderingIndex":1,"displayName":null,"extensibilityDisplayName":"Stripe","availablePresentmentCurrencies":["JPY"],"paymentMethodUiExtension":null,"checkoutHostedFields":null,"alternative":false,"__typename":"PaymentProvider"}]},"__typename":"PaymentLine"}],"paymentLines":[],"billingAddress":null,"paymentFlexibilityPaymentTermsTemplate":null,"__typename":"FilledPaymentTerms"},"poNumber":null,"merchandise":{"taxesIncluded":true,"merchandiseLines":[{"stableId":"eeb26fb8-dc56-40a0-aa7c-6fdb83e79d2f","merchandise":{"__typename":"ContextualizedProductVariantMerchandise","id":"gid://shopify/ProductVariantMerchandise/25853251649","digest":"73d786676192f977a04b8c9ab812987c","variantId":"gid://shopify/ProductVariant/25853251649","title":"Shinkansen Ticket Online Booking : Shin-Osaka to Nagoya","untranslatedTitle":"Shinkansen Ticket Online Booking : Shin-Osaka to Nagoya","subtitle":"Reserved / Adult (12 years old~) / Normal","untranslatedSubtitle":"Reserved / Adult (12 years old~) / Normal","sku":"","price":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"product":{"id":"gid://shopify/Product/7918749825","vendor":"Tokaido","productType":"Shinkansen ticket","__typename":"Product"},"productUrl":"/products/shinkansenticket-shinosaka-nagoya","image":{"altText":"Shinkansen ticket: From Shin-Osaka to Nagoya","one":"https://cdn.shopify.com/s/files/1/1217/6360/products/nagoya_castle_001_87d2602f-098a-49a9-bd09-0ee4f2814850_64x64.jpg?v=1473742556","two":"https://cdn.shopify.com/s/files/1/1217/6360/products/nagoya_castle_001_87d2602f-098a-49a9-bd09-0ee4f2814850_128x128.jpg?v=1473742556","four":"https://cdn.shopify.com/s/files/1/1217/6360/products/nagoya_castle_001_87d2602f-098a-49a9-bd09-0ee4f2814850_256x256.jpg?v=1473742556","__typename":"Image"},"properties":[{"name":"Date","value":{"string":"2024/February/20","__typename":"MerchandisePropertyValueString"},"visible":true,"__typename":"MerchandiseProperty"},{"name":"Time (hour)","value":{"string":"6","__typename":"MerchandisePropertyValueString"},"visible":true,"__typename":"MerchandiseProperty"}],"requiresShipping":true,"options":[{"name":"Seat","value":"Reserved","__typename":"ProductVariantOption"},{"name":"Adult/Child","value":"Adult (12 years old~)","__typename":"ProductVariantOption"},{"name":"Extend","value":"Normal","__typename":"ProductVariantOption"}],"sellingPlan":null,"giftCard":false,"deferredAmount":{"amount":"0.0","currencyCode":"JPY","__typename":"Money"}},"quantity":{"items":{"value":1,"__typename":"IntValueConstraint"},"__typename":"ProposalMerchandiseQuantityByItem"},"totalAmount":{"value":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"recurringTotal":null,"lineAllocations":[{"stableId":"579a3c898fc3edf991250b3419c3687c","quantity":1,"totalAmountBeforeReductions":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"totalAmountAfterDiscounts":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"totalAmountAfterLineDiscounts":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"checkoutPriceAfterDiscounts":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"checkoutPriceAfterLineDiscounts":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"checkoutPriceBeforeReductions":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"unitPrice":null,"allocations":[],"__typename":"LineAllocation"}],"lineComponentsSource":null,"lineComponents":[],"__typename":"MerchandiseLine"}],"__typename":"FilledMerchandiseTerms"},"note":{"customAttributes":[{"key":"Your hotel","value":"hello","__typename":"NoteAttribute"},{"key":"Your checkin_date","value":"02/15/2024","__typename":"NoteAttribute"},{"key":"The full name used for your reservation","value":"hello","__typename":"NoteAttribute"}],"message":"asdasd","__typename":"Note"},"scriptFingerprint":{"signature":null,"signatureUuid":null,"lineItemScriptChanges":[],"paymentScriptChanges":[],"shippingScriptChanges":[],"__typename":"ScriptFingerprint"},"transformerFingerprintV2":null,"buyerIdentity":{"buyerIdentity":{"presentmentCurrency":"JPY","countryCode":"UZ","market":{"id":"gid://shopify/Market/360054886","handle":"international","__typename":"Market"},"__typename":"GuestProfile"},"contactInfoV2":null,"marketingConsent":[],"shopPayOptInPhone":null,"__typename":"FilledBuyerIdentityTerms"},"checkoutCompletionTarget":"ORDER","recurringTotals":[],"subtotalBeforeTaxesAndShipping":{"value":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"totalSavings":{"value":{"amount":"0.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"runningTotal":{"value":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"total":{"__typename":"AnyConstraint"},"checkoutTotalBeforeTaxesAndShipping":null,"checkoutTotalTaxes":null,"checkoutTotal":{"__typename":"AnyConstraint"},"deferredTotal":null,"hasOnlyDeferredShipping":false,"subtotalBeforeReductions":{"value":{"amount":"9970.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"duty":{"totalDutyAmount":null,"totalTaxAndDutyAmount":{"value":{"amount":"0.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"totalAdditionalFeesAmount":null,"__typename":"FilledDutyTerms"},"tax":{"totalTaxAmount":{"value":{"amount":"0.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"totalTaxAndDutyAmount":{"value":{"amount":"0.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"},"totalAmountIncludedInTarget":null,"exemptions":[],"__typename":"FilledTaxTerms"},"tip":{"tipSuggestions":[{"__typename":"TipSuggestion","percentage":0.15,"amount":{"value":{"amount":"1496.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"}},{"__typename":"TipSuggestion","percentage":0.18,"amount":{"value":{"amount":"1795.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"}},{"__typename":"TipSuggestion","percentage":0.2,"amount":{"value":{"amount":"1994.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"}},{"__typename":"TipSuggestion","percentage":0,"amount":{"value":{"amount":"0.0","currencyCode":"JPY","__typename":"Money"},"__typename":"MoneyValueConstraint"}}],"terms":{"__typename":"UnavailableTerms"},"__typename":"TipWrapper"},"localizationExtension":{"fields":[],"__typename":"LocalizationExtension"},"landedCostDetails":{"incotermInformation":null,"__typename":"LandedCostDetails"},"nonNegotiableTerms":null,"optionalDuties":{"buyerRefusesDuties":false,"refuseDutiesPermitted":false,"__typename":"OptionalDuties"},"attribution":{"attributions":[],"__typename":"Attribution"},"saleAttributions":{"attributions":[],"__typename":"SaleAttributions"},"managedByMarketsPro":false,"captcha":null,"cartCheckoutValidation":null,"alternativePaymentCurrency":null,"__typename":"Proposal"},"__typename":"NegotiationResultAvailable"},"errors":[{"code":"BUYER_IDENTITY_MISSING_CONTACT_METHOD","localizedMessage":"Missing a valid contact method.","nonLocalizedMessage":"Missing a valid contact method.","localizedMessageHtml":"Missing a valid contact method.","target":"$.buyerIdentity","__typename":"UnprocessableTermViolation"},{"code":"DELIVERY_FIRST_NAME_REQUIRED","localizedMessage":"Enter a first name","nonLocalizedMessage":"Shop configuration specifies that the first name is required in order to continue.","localizedMessageHtml":"Enter a first name","target":"$.delivery.deliveryLines[0]","__typename":"UnprocessableTermViolation"},{"code":"DELIVERY_LAST_NAME_REQUIRED","localizedMessage":"Enter a last name","nonLocalizedMessage":"A last name is required in order to continue.","localizedMessageHtml":"Enter a last name","target":"$.delivery.deliveryLines[0]","__typename":"UnprocessableTermViolation"},{"code":"DELIVERY_ADDRESS1_REQUIRED","localizedMessage":"Enter an address","nonLocalizedMessage":"An address is required in order to continue.","localizedMessageHtml":"Enter an address","target":"$.delivery.deliveryLines[0]","__typename":"UnprocessableTermViolation"},{"code":"DELIVERY_PHONE_NUMBER_REQUIRED","localizedMessage":"Enter a phone number to use this delivery method","nonLocalizedMessage":"Shop configuration specifies that the phone number is required in order to continue.","localizedMessageHtml":"Enter a phone number to use this delivery method","target":"$.delivery.deliveryLines[0]","__typename":"UnprocessableTermViolation"},{"code":"DELIVERY_CITY_REQUIRED","localizedMessage":"Enter a city","nonLocalizedMessage":"A city is required in order to continue.","localizedMessageHtml":"Enter a city","target":"$.delivery.deliveryLines[0]","__typename":"UnprocessableTermViolation"},{"code":"PAYMENTS_UNACCEPTABLE_PAYMENT_AMOUNT","localizedMessage":"Your payment couldn’t be processed because your order total has changed. Check your order total and try again.","nonLocalizedMessage":"The sum of proposed payments cannot cover the total amount to be paid.","localizedMessageHtml":"Your payment couldn’t be processed because your order total has changed. Check your order total and try again.","target":"$.payment","__typename":"UnprocessableTermViolation"}],"__typename":"NegotiationResultPayload"},"__typename":"Session"}}}'
+    /><meta
+      name="serialized-graphql-endpoint"
+      content='"https://shinkansen-ticket.com/checkouts/unstable/graphql"'
+    /><meta
+      name="serialized-shop-pay-config"
+      content='{"authorization":null,"callback_token":"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzaGlua2Fuc2VuLXRpY2tldC5teXNob3BpZnkuY29tIiwiYXVkIjpbInNoaW5rYW5zZW4tdGlja2V0Lm15c2hvcGlmeS5jb20iLCJzaG9wLmFwcCJdLCJuYmYiOjE3MDcxNTU3MDgsInNlc3Npb25fdG9rZW4iOiJNMFlyUkhWNlYzTlFUMEpCVEhKYWJrOTVWVVo1TWxOMU5HRkZiMlJZU0Zad2JFMU1iUzh6VFRWVmRERXpaV2R6VFVSM1JFbzFVV2w0ZDFsM1dFNTJSVEJETHpkSlpVaFhWSEpGTkVOMGRsaFVia1pMVDB4Tk4wZ3lUSFY0TTNVM2JITlNUU3RTTTIwMVNIWXZXazlOT0VRMlJEaFpTWFIyTWk5clQzbFJNWEJsVjBreWVYRnRiVTVKWms4Mk1IVldORmhCU0doT04xZDNSM0kzWkhremJYZFFXWGxxWldKTmRFRnFaVEJ6VnpKdVJESlFURGw0V2t4NlpYcHVaWFkyU3pGcUswc3dRVmRKU1hCamFsRlNhREJMUmxkRk9WbHhkVTFSZUhkVlQxaEpTWFJrYjBVeE4yODBRMjVTZDJ0TVJqaHRVRzV0TjFOT05IUlBVVGMzU0dSTlFuUnBkRWs5TFMxaGFWWTBVMm94UkV4emFUZHpkMWs0TFMxVmJqbEdRVXRKU1cwM1RtaGpabUpLYTBGMUwzcG5QVDAiLCJzZXNzaW9uX2N1c3RvbWVyX2lkIjpudWxsLCJsb2dpbl93aXRoX3Nob3BfY3VzdG9tZXJfaWQiOm51bGwsInNob3BfYWNjb3VudF91dWlkIjpudWxsLCJpZGVudGl0eV9jdXN0b21lcl9pZCI6bnVsbCwiY3VzdG9tZXJfYXV0aGVudGljYXRpb25fYXV0aF9wcm92aWRlciI6bnVsbCwic3RvcmVmcm9udF9kaWdlc3QiOm51bGwsImV4cCI6MTcwNzE3NzMwOCwibGFuZGluZ19wYWdlIjoiXC8ifQ.TOGYa28FH9jtEu1j8FGba_63GOC6qSFrpe6jw9lb3T8","checkout_as_guest_url":"https://shinkansen-ticket.com/checkouts/cn/c1-504a028a54ba6687cbfa89265899de7a?locale=en-UZ&amp;shop_pay_logout=true&amp;skip_shop_pay=true","from_classic":false,"iframe_token":"Y25qb3hXRmlMbWRsZGQ3WkgxTXl0WS9aL2NZanh1SXgxbkcvemY2UE1DcnFGbDl3QUFmVktTQ2RxVUt0eFZNOC0tdm9palkxN3dwSWUwbWhnMlJYNWNRdz09--2a1e56eeb54fb8d6bd47b219e5462d9378dd328c","pre_select_installments":false,"redirect_source":null,"redirect_url":"cDk5b3FJUnJoM1hBK3VzUWQ4Y2lRaVRHVStJSU5YTUx6STY0TlQ5UTNaNnp4aytGYmV4S21ENVpZK01jak9LSlF0cCs1N0M5S2dMRWc2cUNkZlpWU3pxaVZCdmdOeVI5ZlhMSEhGUDZ0TkpMSWR2UmZZQWl2bnlUTmJKSmRaOFlzeVVSZVQwbXUzRWV0b2wxYWgzdXdaMU9NaGd2Z0xkT0VEM3FRM3oxS0U5UEV6UHkrK3BPK0lFdS9QdGYzTjBrRit5N3FBRGJGKzlhOFBZazBBWmdIa0V2ZTJwanIvVzZ1S2RRTC9ZdFdoMTBRU1RJNUtxZlRjQk1tWk4ra2hhbXh5V0prUGMrZ2hJVy9GdmJGYmVUZ2pWV3oxQkVrM2tOMUl6SEtGR3NXekNKRkltT29kaU40VHFhSko3Q0p3b2hNcXhpaWE4R2ZUeU95dDBWS04vMjI0WFZjL3MvdWxDMEE3UFdBT0NaUmU4ektwSnFzNFM2TTh2VG1YaVB1RWdHS2JXK0FIZDhhdFpzdHZkemQ2UnVwYXBnZnpVaDRQYlExbERpTUg5SlVYWkdxY01yZWtpSW1QS2tzKzE5ejBETEFPT2ViR1N5UkNpbXJXUTRKcnBJeW8wdnJ2RnVoUmdTbDJ1bi85K3ZNRFoxWkU1MDlHTEV0TlhidjJ6dDVDMXRmTjc4UERKdjJTcENCWUhwZTVrbHRNZEE1RnJSdS9pUkxRQjFiait6N3RqbGNWNldhVzI1dFlpMkRCVmdMSWRxcU9LUVpDR254MzExbWo1N29aOWxFaUw3MkFHbjI2dkFPNE1tcjFhR0ZxZ0VWQVd4Q2pZeit1VSt2K0JxRHd3ZUVabmlQR1BsUStScllzejh6d3Q0M1pIRGtmRHBjTS85NU5EZm1lSEJseXNGV0ZzTnA2VkwxSDR2Nml1MC9MNVkwc2F3ZnR6Ly9HWUlqM2pVeFdqYzgyMGUrb3pZRTZOSjdSbHdRV2RuR0hsMUpXMGhXVXV3N21PS1JjTkltWmxFN0xzaExiU0VqV0lSOGhpbzc2MTBXTjJmS29IMTZFTVU2ajlCRktVSEhZM1Fzb0lHajlNZUx3M1FuWjVnUmlXNTBqdG1RQlBaMW9qSjgyUXRvYkJyNGxPanhVN0xJRG9lVkU5L3VNMm42RGFsNzBURVNnMGRMZmdnUDExNzA2c1RzVS8vaDFKZEsvZEVZYjZUU0QwWjZ2akJ1MmNJQWtxTEhkSHNSMGdRZldDeEdqLzdOTksyUWUwejRoT0NJS2hFb0c0OVNmQy96RFdoU2FjQUU1SzdIN3JwdWxQQjdVK0FXaUs0S0tkbjVqVTdMRENWVmNQZmlCcEwycTdQdTk3aWJ4TTJJWlQyWDFvaVdZU1Y4eUN3YUI2VHE2WEVNY0ZGaEZidkpoZDdZRlUwbjF3YThiQUs4b1RCYlBDeEU5blEwN056bGw2NFBCWTNzV2tEd2lqVmRjb1VhdXIzNmxSK0NEUmYvOTVVVWRVay9XOGpJZ0xwdktSQjBwNEIrcmh5WkRmajdhdit5cWlOTDU1MVZRVlFEdFNkaXRzaFloQXJxNW1IWmVuRUwwYnFPSVI0WXRDT0JrRTFQSDZhb3NPeHorRVU0NVlMUUFUQU1mcjJObEdCUyt0QVZHSVZIUzhXbGZQaUFHK25Jem84TFREdkc2VnBxSWQzOFUyWVRQWkpKRktaV3ZGUUl6dTk0cDMrQTUvSVNSVTBxMEhDTzQvSk9GTlppMk1kUzdGRjFzOHJkM3k5Y0hPQmhxZlJaMW5hZEQvbHQxazR1QkFycGo3TWkxYmM4b0VobFY4akJHWHBDejF2SE9XSnlRWUQ3WkJJSlByLzZVRU9tQmRNSUhIRGFxekRVZktSeDdFVjdWbVNIbXZla092OXZYblpMZ29wdnV3WnMwSXBQZWUybDZFUGlxc29rVDVVOFBHbzhLdzNORkhZa09BdDBoZDM2MjdCVEFkOWx4OEtBVEovQm5qZityNE9FcGthUGdZMzBlWS9DbENEUENzM20rUDBoOS9iZkJpN1dGNG52c3M5U0hBYWg2b1lOWXN5eC9HTkVHbmhRdjZrV2xPUTBPTWdSL2xUZitqYVdlalFLbWtLVkhLV2Q1T1lkVjlZMm4vUEFrclZrVXFhTkhubmUvMFd3ZmhXQXBKUUpvT1ZkNmhYTWJPUDVZY1NyeVVTMDNjVWpYRmxWM21kSkZubnBGa1gxaVNieWtKTDJldnNkSi9uU1ViREVOMlpJNVorc044VU1aa2pTNjhacUhtRnJUQmw0K1FzdmMxV0ZLOWJ4MEJEWmdRLzc4d21hUT09LS1OL0I3clR5K1Vka0JtM0FHNkJCOTlnPT0=--d6e4c69ca39e2e70d63f3c3ff2a30545105741ec","tracking_unique":"6a4f2937-0e2c-4f75-afb8-4c7793d97bde","tracking_visit":"4276bb9f-7b7d-4dec-b69f-41b92950afeb","transaction_params":"encrypted_params=eldockVqNjJyQ0FyNDVrU0l2Y0J5emxHNGZ5STFsRTlMQ09Ma3d1Q0phOUJPbDFJTDBaRjFjb050TnEvWVV6YVVxbEFMdEdlM1NOYjhzZ1hOaytNbnc9PS0tMjJUV0xHWEZKMVNhUlBsNmlTSkpMUT09--3732b3daf5087ac235eff2be8ac62627340b9ad9","web_url":"https://shinkansen-ticket.com/checkouts/cn/c1-504a028a54ba6687cbfa89265899de7a?locale=en-UZ&amp;shop_pay_logout=true&amp;skip_shop_pay=true"}'
+    /><meta name="serialized-deploy-stage" content='"production"' /><meta
+      name="serialized-public-path"
+      content='"https://cdn.shopify.com/shopifycloud/checkout-web/assets/"'
+    /><meta
+      name="serialized-receipt"
+      content='{"id":null,"exists":false,"inProgress":false,"orderStatusPageUrl":null,"shopPay":false}'
+    /><meta name="serialized-request-id" content='"850d05c95ffb715b"' /><meta
+      name="serialized-server-handling"
+      content='"fast"'
+    /><meta name="serialized-worker-version" content='"fast"' /><meta
+      name="serialized-server-render"
+      content='"render"'
+    /><meta name="serialized-session-finished" content="false" /><meta
+      name="serialized-api-client-id"
+      content="580111"
+    /><meta name="serialized-redesign-enabled" content="true" /><meta
+      name="serialized-shop"
+      content='{"id":"gid://shopify/Shop/12176360","name":"Shinkansen-Ticket.com","domain":"shinkansen-ticket.com","myshopifyDomain":"shinkansen-ticket.myshopify.com"}'
+    /><meta
+      name="serialized-login-url"
+      content='"https://shinkansen-ticket.com/account/login?checkout_url=%2Fcheckouts%2Fcn%2Fc1-504a028a54ba6687cbfa89265899de7a%3Flocale%3Den-UZ"'
+    /><meta
+      name="serialized-logout-url"
+      content='"https://shinkansen-ticket.com/account/logout?return_url=%2Fcheckouts%2Fcn%2Fc1-504a028a54ba6687cbfa89265899de7a%3Flocale%3Den-UZ"'
+    /><meta name="serialized-invoice-login-type" content="null" />
+    <div id="app"></div>
+  </body>
+</html>

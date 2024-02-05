@@ -491,15 +491,16 @@ var variants2 = "Adult (12 years old~)";
 var selectedData = fullData;
 var selecteddTime = "";
 var selectQuanty = "";
-var prices = JSON.parse(localStorage.getItem('product'))
 // console.log(prices[0].price, 'sdasd');
 
 
 function postAllElement2(key) {
   if (key === 1) {
     variants2 = "Adult (12 years old~)";
+    // var asd = prices[0].price-0.28
   } else {
     variants2 = "Child (6~11 years old)";
+    // var asds=prices[0].price-0.91
   }
 }
 
@@ -636,7 +637,7 @@ if (localStorage.getItem("product").length > 0) {
   document.querySelector("#cart_Number").innerHTML = `
   <div class="cart_count">${JSON.parse(
     localStorage.getItem("product")
-  ).length}</div> <span>Cart</span>
+  ).length}</div><span>Cart</span>
   `
 } else {
   document.querySelector("#cart_count").innerHTML = "";
