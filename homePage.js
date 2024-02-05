@@ -569,20 +569,33 @@ function selectedQty() {
 // }
 function openWindow() {
   var saqlanganMalumotlar = localStorage.getItem('AllData');
-  var malumotlar = {}; // Yangi malumotlar obyekti
+  var saqlangan =JSON.parse(localStorage.getItem('product'));
 
+   // Yangi malumotlar obyekti
+var malumotlar=[]
   if (saqlanganMalumotlar) {
-    malumotlar = JSON.parse(saqlanganMalumotlar);
-  console.log(malumotlar,"salom")
+    malumotlar =JSON.parse(saqlanganMalumotlar)
+  }else{
+     malumotlar = [];
+  }
+var qonday={
+  variants:variants,
+  variants2: variants2,
+  selectedData:selectedData,
+  selecteddTime: selecteddTime,
+  selectQuanty:selectQuanty,
+  img:saqlangan[0].img,
+  price:saqlangan[0].price,
+  title:saqlangan[0].title,
+  type:saqlangan[0].type
 }
-  
   // Yangi malumotlarni qo'shib qo'yamiz
-  malumotlar.variants = variants;
-  malumotlar.variants2 = variants2;
-  malumotlar.selectedData = selectedData;
-  malumotlar.selecteddTime = selecteddTime;
-  malumotlar.selectQuanty = selectQuanty;
-
+  // malumotlar.;
+  // malumotlar.;
+  // malumotlar.;
+  // malumotlar.;
+  // malumotlar.;
+malumotlar.push(qonday)
   // Malumotlarni LocalStorage-ga saqlaymiz
   localStorage.setItem('AllData', JSON.stringify(malumotlar));
 
