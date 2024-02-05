@@ -411,7 +411,7 @@ var getData = new Date();
 var getFullYear = getData.getFullYear();
 var getMonth = getData.getMonth();
 var getDay = getData.getDay();
-var getAllData = []
+var getAllData = [];
 var getRealMonth = "";
 
 if (getMonth === 0) {
@@ -441,8 +441,24 @@ var fullData = getFullYear + "/" + getRealMonth + "/" + getDay;
 var dataa = [];
 var result = JSON.parse(localStorage.getItem("product"));
 var asd = result;
+var prices = JSON.parse(localStorage.getItem('product'))
+var fllPrices = prices[0].price
+var fllPrices2 = prices[0]
 
+function postAllElement(key) {
+  if (key === 1) {
+    variants = "Reserved";
+  document.getElementById("getPriceData").innerHTML = "¥" + fllPrices + "JPY";
+  } else if (key === 2) {
+    variants = "Green Reserved";
+  document.getElementById("getPriceData").innerHTML = "¥" + fllPrices2.price2 + "JPY";
+  } else {
+    variants = "Unreserved";
+  document.getElementById("getPriceData").innerHTML = "¥" + fllPrices2.price3 + "JPY";
+  }
+}
 asd.map((item, key) => {
+  document.getElementById("getPriceData").innerHTML = "¥" + fllPrices + "JPY";
   document.getElementById("getDataImg").innerHTML += `
     <ul class="slides">
 
@@ -467,7 +483,7 @@ asd.map((item, key) => {
   </ul>
     `;
   document.getElementById("getProductName").innerHTML = item.title;
-  document.getElementById("getPriceData").innerHTML = "¥" + item.price + "JPY";
+  // document.getElementById("getPriceData").innerHTML = "¥" + fllPrices + "JPY";
 });
 
 var variants = "Reserved";
@@ -475,16 +491,9 @@ var variants2 = "Adult (12 years old~)";
 var selectedData = fullData;
 var selecteddTime = "";
 var selectQuanty = "";
+var prices = JSON.parse(localStorage.getItem('product'))
+// console.log(prices[0].price, 'sdasd');
 
-function postAllElement(key) {
-  if (key === 1) {
-    variants = "Reserved";
-  } else if (key === 2) {
-    variants = "Green Reserved";
-  } else {
-    variants = "Unreserved";
-  }
-}
 
 function postAllElement2(key) {
   if (key === 1) {
@@ -535,7 +544,7 @@ function selectedQty() {
 //       // Qo'shilishi kerak bo'lgan hozirgi malumotlar bilan birgalikda saqlash
 //       var hozirgiMalumotlar = {
 //           // Hozirgi malumotlar
-          
+
 //       'variants':variants,
 //       'variants':variants2,
 //       'selectedData':selectedData,
@@ -553,7 +562,7 @@ function selectedQty() {
 //       // Agar LocalStorage-da avvalroq malumotlar yo'q bo'lsa, faqat hozirgi malumotlarni saqlab qo'yamiz
 //       var hozirgiMalumotlar = {
 //           // Hozirgi malumotlar
-          
+
 //       'variants':variants,
 //       'variants':variants2,
 //       'selectedData':selectedData,
@@ -568,43 +577,68 @@ function selectedQty() {
 
 // }
 function openWindow() {
-  var saqlanganMalumotlar = localStorage.getItem('AllData');
-  var saqlangan =JSON.parse(localStorage.getItem('product'));
+  var saqlanganMalumotlar = localStorage.getItem("AllData");
+  var saqlangan = JSON.parse(localStorage.getItem("product"));
 
-   // Yangi malumotlar obyekti
-var malumotlar=[]
+  // Yangi malumotlar obyekti
+  var malumotlar = [];
   if (saqlanganMalumotlar) {
-    malumotlar =JSON.parse(saqlanganMalumotlar)
-  }else{
-     malumotlar = [];
+    malumotlar = JSON.parse(saqlanganMalumotlar);
+  } else {
+    malumotlar = [];
   }
-var qonday={
-  variants:variants,
-  variants2: variants2,
-  selectedData:selectedData,
-  selecteddTime: selecteddTime,
-  selectQuanty:selectQuanty,
-  img:saqlangan[0].img,
-  price:saqlangan[0].price,
-  title:saqlangan[0].title,
-  type:saqlangan[0].type
-}
+  var qonday = {
+    variants: variants,
+    variants2: variants2,
+    selectedData: selectedData,
+    selecteddTime: selecteddTime,
+    selectQuanty: selectQuanty,
+    img: saqlangan[0].img,
+    price: prices,
+    title: saqlangan[0].title,
+    type: saqlangan[0].type,
+  };
   // Yangi malumotlarni qo'shib qo'yamiz
   // malumotlar.;
   // malumotlar.;
   // malumotlar.;
   // malumotlar.;
   // malumotlar.;
-malumotlar.push(qonday)
+  malumotlar.push(qonday);
   // Malumotlarni LocalStorage-ga saqlaymiz
-  localStorage.setItem('AllData', JSON.stringify(malumotlar));
+  localStorage.setItem("AllData", JSON.stringify(malumotlar));
 
   // Narigi sahifaga o'tish
-  // window.location = './Cart.html';
+  window.location = "./Cart.html";
 }
 
 function onLoadFuncCart() {
-  var asd = JSON.parse(localStorage.getItem('AllData'))
+  var asd = JSON.parse(localStorage.getItem("AllData"));
+  asd.map(item => {
+    document.querySelector('.big_maps').innerHTML+= `<div class="hedr">
+    <img class='heder_img' src="${item.img}" alt="">
+    <div class="heder_text">
+      <p>${item.title} - ${item.variants} / ${item.variants2}</p>
+      <p>Time (hour): ${item.selecteddTime}</p>
+      <p>¥${item.price} JPY</p>
+      <div>
+      <h3>Quantity:</h3>
+      <input type="text" placeholder="1" value='${item.selectQuanty}'>
+    </div>
+      <p class="hed">Remove</p>
+    </div>
+  </div>`
+  })
+}
 
-      console.log(asd)
+
+if (localStorage.getItem("product").length > 0) {
+  document.querySelector("#cart_Number").innerHTML = `
+  <div class="cart_count">${JSON.parse(
+    localStorage.getItem("product")
+  ).length}</div> <span>Cart</span>
+  `
+} else {
+  document.querySelector("#cart_count").innerHTML = "";
+  console.log("yoq");
 }
