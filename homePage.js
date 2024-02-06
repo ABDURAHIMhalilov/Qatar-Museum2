@@ -437,6 +437,15 @@ if (getMonth === 0) {
 } else {
   getRealMonth = "December";
 }
+
+var variants = "Reserved";
+var variants2 = "Adult (12 years old~)";
+var selectedData = fullData;
+var selecteddTime = "";
+var selectQuanty = "";
+// console.log(prices[0].price, 'sdasd');
+
+
 var fullData = getFullYear + "/" + getRealMonth + "/" + getDay;
 var dataa = [];
 var result = JSON.parse(localStorage.getItem("product"));
@@ -444,15 +453,32 @@ var asd = result;
 var prices = JSON.parse(localStorage.getItem('product'))
 var fllPrices = prices[0].price
 var fllPrices2 = prices[0]
+var really_price = prices.price
+function postAllElement2(key) {
+  if (key === 1) {
+    variants2 = "Adult (12 years old~)";
+    really_price = fllPrices
+    document.getElementById("getPriceData").innerHTML = "¥" + fllPrices + "JPY";
+  // var asd = prices[0].price-0.28
+  } else {
+    variants2 = "Child (6~11 years old)";
+    really_price = fllPrices2.price4
+    document.getElementById("getPriceData").innerHTML = "¥" + fllPrices2.price4 + "JPY";
+  // var asds=prices[0].price-0.91
+  }
+}
 
 function postAllElement(key) {
   if (key === 1) {
     variants = "Reserved";
+    really_price = fllPrices
   document.getElementById("getPriceData").innerHTML = "¥" + fllPrices + "JPY";
   } else if (key === 2) {
     variants = "Green Reserved";
-  document.getElementById("getPriceData").innerHTML = "¥" + fllPrices2.price2 + "JPY";
+    really_price = fllPrices2.price2
+    document.getElementById("getPriceData").innerHTML = "¥" + fllPrices2.price2 + "JPY";
   } else {
+    really_price = fllPrices2.price3
     variants = "Unreserved";
   document.getElementById("getPriceData").innerHTML = "¥" + fllPrices2.price3 + "JPY";
   }
@@ -486,23 +512,6 @@ asd.map((item, key) => {
   // document.getElementById("getPriceData").innerHTML = "¥" + fllPrices + "JPY";
 });
 
-var variants = "Reserved";
-var variants2 = "Adult (12 years old~)";
-var selectedData = fullData;
-var selecteddTime = "";
-var selectQuanty = "";
-// console.log(prices[0].price, 'sdasd');
-
-
-function postAllElement2(key) {
-  if (key === 1) {
-    variants2 = "Adult (12 years old~)";
-    // var asd = prices[0].price-0.28
-  } else {
-    variants2 = "Child (6~11 years old)";
-    // var asds=prices[0].price-0.91
-  }
-}
 
 function selectData() {
   var selectt = document.querySelector("#date").value;
@@ -595,7 +604,7 @@ function openWindow() {
     selecteddTime: selecteddTime,
     selectQuanty: selectQuanty,
     img: saqlangan[0].img,
-    price: prices,
+    price: really_price,
     title: saqlangan[0].title,
     type: saqlangan[0].type,
   };
