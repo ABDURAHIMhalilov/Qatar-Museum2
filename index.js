@@ -5,8 +5,9 @@ var data = [
       "Haruka Airport Express Train Ticket Online Booking : Kyoto to Kansai International Airport",
     price: "4,320",
     img: "https://shinkansen-ticket.com/cdn/shop/products/kansaiinternationalairport_KIX_001_large.jpg?v=1485355415",
-    price2: "1,300",
-    price3: "2,570",
+      price2: "1,300",
+      price3: "2,570",
+      price4: '2,460'
   },
   {
     type: "Airport Express: Kansai",
@@ -16,6 +17,7 @@ var data = [
     img: "https://shinkansen-ticket.com/cdn/shop/products/kansaiinternationalairport_KIX_001_large.jpg?v=1485355415",
     price2: "3,300",
     price3: "4,570",
+    price4: '2,460'
   },
   {
     type: "Airport Express: Narita",
