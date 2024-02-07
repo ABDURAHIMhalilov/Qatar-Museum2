@@ -5,9 +5,9 @@ var data = [
       "Haruka Airport Express Train Ticket Online Booking : Kyoto to Kansai International Airport",
     price: "4,320",
     img: "https://shinkansen-ticket.com/cdn/shop/products/kansaiinternationalairport_KIX_001_large.jpg?v=1485355415",
-      price2: "1,300",
-      price3: "2,570",
-      price4: '2,460'
+    price2: "1,300",
+    price3: "2,570",
+    price4: "2,460",
   },
   {
     type: "Airport Express: Kansai",
@@ -17,7 +17,7 @@ var data = [
     img: "https://shinkansen-ticket.com/cdn/shop/products/kansaiinternationalairport_KIX_001_large.jpg?v=1485355415",
     price2: "3,300",
     price3: "4,570",
-    price4: '2,460'
+    price4: "2,460",
   },
   {
     type: "Airport Express: Narita",
@@ -3018,31 +3018,37 @@ var data = [
     img: "https://shinkansen-ticket.com/cdn/shop/products/yamagata_001_cc5b80bc-3bfe-450f-9a85-1670dbf17b28_large.jpg?v=1575198097",
   },
   {
-    type: 'From Omiya',
+    type: "From Omiya",
     title: "Shinkansen Ticket Online Booking : Omiya to Jomo Kogen",
     price: "8,840",
     img: "https://shinkansen-ticket.com/cdn/shop/products/taniagwadake_001_1129102a-6e52-4b01-8898-ffbc2d6e42bd_grande.jpg?v=1573687936",
   },
   {
-    type: 'From Omiya',
+    type: "From Omiya",
     title: "Shinkansen Ticket Online Booking : Omiya to Joetsumyoko",
     price: "11,920",
     img: "https://shinkansen-ticket.com/cdn/shop/products/joetsumyoko_003_e510a4fd-19e1-4cdd-8fa9-0748ca160939_grande.jpg?v=1547221936",
   },
   {
-    type: 'From Omiya',
+    type: "From Omiya",
     title: "Shinkansen Ticket Online Booking : Omiya to Akita",
     price: "11,440",
     img: "https://shinkansen-ticket.com/cdn/shop/products/akita_001_7784158d-0606-4325-b8f7-089b017c276b_grande.jpg?v=1582518863",
   },
   {
-    type: 'From Omiya',
+    type: "From Omiya",
     title: "Train Package Online Booking : Omiya to Hakodate",
     price: "27,090",
     img: "https://shinkansen-ticket.com/cdn/shop/products/hakodateyama_001_0491c289-049e-4ff8-84cf-4a5bd6157bce_grande.webp?v=1673226993",
   },
   {
-    type: 'asd',
+    "type": "From Hakata (Fukuoka)",
+    "title": "Shinkansen Ticket Online Booking : Hakata to Tokyo",
+    "price": "¥9,970"
+},
+
+  {
+    type: "asd",
     title: "Shinkansen",
     price: "050",
     img: "https",
@@ -3108,10 +3114,10 @@ data.map((item) => {
 
 if (localStorage.getItem("product").length > 0) {
   document.querySelector("#cart_Number").innerHTML = `
-  <div class="cart_count">${JSON.parse(
-    localStorage.getItem("product")
-  ).length}</div> <span>Cart</span>
-  `
+  <div class="cart_count">${
+    JSON.parse(localStorage.getItem("product")).length
+  }</div> <span>Cart</span>
+  `;
 } else {
   document.querySelector("#cart_count").innerHTML = "";
   console.log("yoq");

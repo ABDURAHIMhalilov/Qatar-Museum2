@@ -652,3 +652,7 @@ if (localStorage.getItem("product").length > 0) {
   document.querySelector("#cart_count").innerHTML = "";
   console.log("yoq");
 }
+
+
+
+{/* <div class="cart_count">1</div> */}
