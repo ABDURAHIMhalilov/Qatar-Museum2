@@ -624,7 +624,7 @@ function openWindow() {
 
 function onLoadFuncCart() {
   var asd = JSON.parse(localStorage.getItem("AllData"));
-  asd.map(item => {
+  asd.map((item,key) => {
     document.querySelector('.big_maps').innerHTML+= `<div class="hedr">
     <img class='heder_img' src="${item.img}" alt="">
     <div class="heder_text">
@@ -635,10 +635,16 @@ function onLoadFuncCart() {
       <h3>Quantity:</h3>
       <input type="text" placeholder="1" value='${item.selectQuanty}'>
     </div>
-      <p class="hed">Remove</p>
+      <p onclick="deleteData()" class="hed">Remove</p>
     </div>
   </div>`
   })
+}
+function deleteData(params) {
+  var asd = JSON.parse(localStorage.getItem("AllData"));
+asd.splice(params,1)
+localStorage.setItem('AllData',JSON.stringify(asd))
+window.location.reload()
 }
 
 
