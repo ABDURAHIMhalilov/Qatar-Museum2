@@ -1,0 +1,30 @@
+
+.min_prod{
+    width: 100%;
+}
+@media(max-width: 960px){
+    #car_divv {
+        width: 250px !important;
+    }
+}
+
+@media(max-width: 755px) {
+    #car_divv{
+        width: 200px !important;
+    }
+    .products {
+        width: 100% !important;
+    }
+    .min_prod {
+        width: 100% !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 480px) {
+    #car_divv{
+        width: 400px !important;
+    }
+}
